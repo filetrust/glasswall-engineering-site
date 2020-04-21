@@ -1,27 +1,25 @@
-
 trigger:
-- master
+  - master
 
 pool:
-  vmImage: 'windows-2019'
+  vmImage: "windows-2019"
 steps:
-    - task: UseNode@1
-      inputs:
-        checkLatest: true
-      displayName: 'install latest node'
+  - task: UseNode@1
+    inputs:
+      checkLatest: true
+    displayName: "install latest node"
 
-    - script: |
-        npm install
-      displayName: 'npm install'
+  - script: |
+      npm install
+    displayName: "npm install"
+  - script: |
+      npm run build
+    displayName: "npm build"
 
-    - script: |
-        npm run build
-      displayName: 'npm build'
-    
-    - task: AzureFileCopy@4
-      inputs:
-        SourcePath: 'build/*'
-        azureSubscription: 'AzureDevopsServicePrincipal'
-        Destination: 'AzureBlob'
-        storage: 'gwengineeringsite '
-        ContainerName: '$web'
+  - task: AzureFileCopy@4
+    inputs:
+      SourcePath: "build/*"
+      azureSubscription: "AzureDevopsServicePrincipal"
+      Destination: "AzureBlob"
+      storage: "gwengineeringsite "
+      ContainerName: "$web"
