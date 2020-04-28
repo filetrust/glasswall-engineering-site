@@ -1,5 +1,5 @@
 ---
-title: Rebuild Product Description
+title: Rebuild
 ---
 
 Regenerating every file to a standard of ‘known good’, enabling you to trust every file. 
