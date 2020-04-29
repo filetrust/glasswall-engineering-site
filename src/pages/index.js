@@ -8,32 +8,30 @@ import styles from "./styles.module.css";
 
 const features = [
   {
-    title: <>Easy to Use</>,
+    title: <>Products</>,
     imageUrl: "img/undraw_docusaurus_mountain.svg",
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Product descriptions providing detailed information on the features offered, the benefits to users and the technologies involved.
       </>
     ),
   },
   {
-    title: <>Focus on What Matters</>,
+    title: <>Documentation</>,
     imageUrl: "img/undraw_docusaurus_tree.svg",
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Provides develpers all the information required to use the Glasswall products 
+	with example code in a variety of languages and step by step guides.
       </>
     ),
   },
   {
-    title: <>Powered by React</>,
+    title: <>Use Cases</>,
     imageUrl: "img/undraw_docusaurus_react.svg",
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        How can the Glasswall Product help you. We've provided a number of use cases that cover common scenarios.
       </>
     ),
   },
@@ -72,7 +70,7 @@ function Home() {
                 "button button--outline button--secondary button--lg",
                 styles.getStarted
               )}
-              to={useBaseUrl("docs/doc1")}
+              to={useBaseUrl("docs/getting-started")}
             >
               Get Started
             </Link>

@@ -17,7 +17,7 @@ module.exports = {
         {
           to: "docs/doc1",
           activeBasePath: "docs",
-          label: "Docs",
+          label: "Documentation",
           position: "left",
         },
         {
@@ -39,12 +39,8 @@ module.exports = {
           title: "Docs",
           items: [
             {
-              label: "Style Guide",
-              to: "docs/doc1",
-            },
-            {
-              label: "Second Doc",
-              to: "docs/doc2",
+              label: "Getting Started",
+              to: "docs/getting-started",
             },
           ],
         },
@@ -72,10 +68,14 @@ module.exports = {
               label: "Twitter",
               href: "https://twitter.com/glasswallglobal",
             },
+			           {
+              label: "LinkedIn",
+              href: "https://www.linkedin.com/company/glasswall-solutions-limited/",
+            },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Glasswall Solutions Ltd. Built with Docusaurus.`,
     },
   },
   presets: [
