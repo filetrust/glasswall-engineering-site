@@ -31,7 +31,7 @@ const features = [
     imageUrl: "img/undraw_docusaurus_react.svg",
     description: (
       <>
-        How can the Glasswall Product help you. We've provided a number of use cases that cover common scenarios.
+        How can the Glasswall Products help you. We've provided a number of use cases that cover common scenarios.
       </>
     ),
   },
@@ -57,8 +57,8 @@ function Home() {
   const { siteConfig = {} } = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`Trust every file with Glasswall Solutions`}
+      description="The online knowledge base for Glasswall technologies and products, with code examples and detailed CDR Use Cases."
     >
       <header className={classnames("hero hero--primary", styles.heroBanner)}>
         <div className="container">
