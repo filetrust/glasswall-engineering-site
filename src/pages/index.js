@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 const features = [
   {
     title: <>Products</>,
-    imageUrl: "img/undraw_docusaurus_mountain.svg",
+    imageUrl: "img/product-illustration-01.png",
     description: (
       <>
         Product descriptions providing detailed information on the features offered, the benefits to users and the technologies involved.
@@ -18,7 +18,7 @@ const features = [
   },
   {
     title: <>Documentation</>,
-    imageUrl: "img/undraw_docusaurus_tree.svg",
+    imageUrl: "img/documentation-illustration-02.png",
     description: (
       <>
         Provides develpers all the information required to use the Glasswall products 
@@ -28,7 +28,7 @@ const features = [
   },
   {
     title: <>Use Cases</>,
-    imageUrl: "img/undraw_docusaurus_react.svg",
+    imageUrl: "img/use-cases-illustration-03.png",
     description: (
       <>
         How can the Glasswall Products help you. We've provided a number of use cases that cover common scenarios.
