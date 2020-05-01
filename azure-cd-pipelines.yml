@@ -1,4 +1,5 @@
 trigger:
+
   - master
 
 pool:
@@ -23,3 +24,12 @@ steps:
       Destination: "AzureBlob"
       storage: "gwengineeringsite "
       ContainerName: "$web"
+    displayName: Azure copy build to blob storage
+  
+  - task: AzureCLI@2
+    inputs:
+      azureSubscription: 'AzureDevopsServicePrincipal'
+      scriptType: 'batch'
+      scriptLocation: 'inlineScript'
+      inlineScript: 'az cdn endpoint purge -g rgp-weu-engineering-site  -n engineering-glasswallsolutions --profile-name glasswall-engineering-site-cdn --content-paths "/" --no-wait '
+    displayName: Purge CDN Endpoint
