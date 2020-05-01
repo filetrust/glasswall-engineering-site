@@ -57,12 +57,8 @@ module.exports = {
           title: "Social",
           items: [
             {
-              label: "Blog",
-              to: "blog",
-            },
-            {
               label: "GitHub",
-              href: "ttps://github.com/filetrust",
+              href: "https://github.com/filetrust",
             },
             {
               label: "Twitter",
