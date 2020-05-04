@@ -2,7 +2,11 @@ module.exports = {
   someSidebar: {
 	Products:[
 		"product-descriptions/description-rebuild", "product-descriptions/description-file-type-detection"],
-    Docusaurus: ["doc1"],
+	Guides:[
+	"documentation-and-guides",
+	"guides/file-rebuild-api-using-aws-sam",
+	"guides/aws-customer-authoriser-api-authorisation-and-access"
+	],
     Features: ["mdx"],
   },
 };
