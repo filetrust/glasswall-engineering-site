@@ -5,6 +5,7 @@ module.exports = {
 	Guides:[
 	"documentation-and-guides",
 	"guides/file-rebuild-api-using-aws-sam",
+	"guides/file-analyse-using-aws-sam",
 	"guides/aws-customer-authoriser-api-authorisation-and-access"
 	],
     Features: ["mdx"],
