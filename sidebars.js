@@ -1,11 +1,37 @@
 module.exports = {
   someSidebar: {
-	Products:[
-		"product-descriptions/description-rebuild", "product-descriptions/description-file-type-detection"],
-	Guides:[
+	Products:
+	[
+	"product-descriptions/product-overview",
+		{
+			"Rebuild": [
+				"product-descriptions/description-rebuild",
+				"guides/file-rebuild-how-it-works"
+			],
+			"File Type Detection": [
+			
+				"product-descriptions/description-file-type-detection",
+				"guides/file-type-detection-how-it-works"
+			]
+		}
+	],
+	Guides:
+	[
 	"documentation-and-guides",
-	"guides/file-rebuild-api-using-aws-sam",
-	"guides/aws-customer-authoriser-api-authorisation-and-access"
+		{
+			"Rebuild" :[
+				"guides/file-rebuild-api-using-aws-sam",			
+			],
+			"Analysis" :[
+				"guides/file-analyse-using-aws-sam",			
+			],
+			"File Type Detection" :[
+				"guides/file-type-detection-using-aws-sam",
+			],
+			"Security" :[
+				"guides/aws-customer-authoriser-api-authorisation-and-access"
+			]
+		}
 	],
     Features: ["mdx"],
   },
