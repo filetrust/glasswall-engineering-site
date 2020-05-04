@@ -1,6 +1,8 @@
 ﻿Glasswall’s award winning d-FIRST SDK is now available as a cloud API with two flavours: Analyse and Rebuild. If you are looking for an easy way to make your first request to the API, you are in luck as, this guide walks through making a request using Postman.
 
 
+![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_1.png)
+
 ### API Key
 Before we begin, we will need a valid Glasswall Cloud API key. If you are reading this you may already have one. If not, trial keys are free so please get in touch: https://glasswallsolutions.com/contact/
 
