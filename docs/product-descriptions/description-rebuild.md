@@ -1,5 +1,6 @@
 ---
 title: Rebuild
+sidebar_label: Product Description
 ---
 
 Regenerating every file to a standard of ‘known good’, enabling you to trust every file. 
