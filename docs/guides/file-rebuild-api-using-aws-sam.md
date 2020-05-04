@@ -111,22 +111,22 @@ documentation to find out how to generate read SAS tokens that can be used on th
 ### Pre-requisites
 
 1. An aws account
-2. Permissions to create cloud formations
+1. Permissions to create cloud formations
 
 ### Steps:
 
 1. Create a bucket for the deployed code.
-2. Upload Deployment zip into bucket, take note of the name
-3. Edit serverless.template file, update the codeuri field to reflect the location of the
+1. Upload Deployment zip into bucket, take note of the name
+1. Edit serverless.template file, update the codeuri field to reflect the location of the
    deployment.
    - Format example: s3://nameofbucket/nameoffolder/nameof.zip
-4. Log on to aws
-5. Navigate to AWS CloudFormation
-6. Create a stack
+1. Log on to aws
+1. Navigate to AWS CloudFormation
+1. Create a stack
    ![Figure13](/img/docs/guides/Figure13.png)
 
-7. Select serverless.template from disk
+1. Select serverless.template from disk
    ![Figure14](/img/docs/guides/Figure14.png)
 
-8. Enter a name for the stack
-9. Click next until end and finish
+1. Enter a name for the stack
+1. Click next until end and finish

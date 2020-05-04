@@ -11,7 +11,7 @@ module.exports = {
 			"Analysis" :[
 				"guides/file-analyse-using-aws-sam",			
 			],
-			"File Detection" :[
+			"File Type Detection" :[
 				"guides/file-type-detection-using-aws-sam",
 			],
 			"Security" :[
