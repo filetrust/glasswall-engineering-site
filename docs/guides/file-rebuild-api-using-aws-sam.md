@@ -76,17 +76,11 @@ documentation to find out how to generate read SAS tokens that can be used on th
 ```		
   This endpoint does the following:
 - Downloads the file found at SasUrl using a GET request.
-
   - If it is unsuccessful it returns BAD REQUEST
-
   - If it is successful then it will send the file to the core engine.
-
 - File name is extracted from the URL.
-
 - The core engine will then try and determine the file type
-
 - The file is protected with the default content management flags for the file type.
-
 - Protected file is returned
  
 
@@ -94,22 +88,22 @@ documentation to find out how to generate read SAS tokens that can be used on th
 
   ### Pre-requisites
 1. Visual Studio 2017 or 2019 installed.
-2. AWS Toolkit extension for visual studio
-3. AWS SAM CLI
-4. Credentials configured for AWS
+1. AWS Toolkit extension for visual studio
+1. AWS SAM CLI
+1. Credentials configured for AWS
 
 ### Steps:
 
 1. Clone repo https://github.com/filetrust/cloud-serverless-sdk
-2. Open .sln file Glasswall.CloudSdk.AWS
-3. Right click on project Glasswall.Cloudsdk.AWS.Rebuild
-4. Click publish to AWS lambda
-5. For options:
-   a. Account profile: Choose one that has permissions to create a cloud formation.
-   b. Region: Where the lambda will run
-   c. Stack name: This will be what the name of the stack the cloud formation will
+1. Open .sln file Glasswall.CloudSdk.AWS
+1. Right click on project Glasswall.Cloudsdk.AWS.Rebuild
+1. Click publish to AWS lambda
+1. For options:
+   1. Account profile: Choose one that has permissions to create a cloud formation.
+   1. Region: Where the lambda will run
+   1. Stack name: This will be what the name of the stack the cloud formation will
    use, resources will use this in their name.
-   d. S3 bucket: The bucket where the source code will be zipped and uploaded
+   1. S3 bucket: The bucket where the source code will be zipped and uploaded
    too
 
 ## Deployment Option - 2: Manually create cloud formation
@@ -122,25 +116,17 @@ documentation to find out how to generate read SAS tokens that can be used on th
 ### Steps:
 
 1. Create a bucket for the deployed code.
-
 2. Upload Deployment zip into bucket, take note of the name
-
 3. Edit serverless.template file, update the codeuri field to reflect the location of the
    deployment.
-   a. Format example: s3://nameofbucket/nameoffolder/nameof.zip
-
+   - Format example: s3://nameofbucket/nameoffolder/nameof.zip
 4. Log on to aws
-
 5. Navigate to AWS CloudFormation
-
 6. Create a stack
-
    ![Figure13](/img/docs/guides/Figure13.png)
 
 7. Select serverless.template from disk
-
    ![Figure14](/img/docs/guides/Figure14.png)
 
 8. Enter a name for the stack
-
 9. Click next until end and finish
