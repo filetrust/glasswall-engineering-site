@@ -4,18 +4,15 @@ Glasswall regenerates clean, safe and visually identical files in milliseconds, 
 
 Glasswall's award winning d-FIRST SDK is now available as a cloud API File Rebuild. If you are looking for an easy way to make your first request to the API, you are in luck as, this guide walks through making a request using Postman.
 
-API Key
-=======
+## API Key
 
 Before we begin, we will need a valid Glasswall Cloud API key. If you are reading this you may already have one. If not, trial keys are free so please get in touch: <https://glasswallsolutions.com/contact/> or visit <https://glasswall-store.com/> to make a purchase.
 
-Postman --- API Development
-=========================
+## Postman --- API Development
 
 In this guide we will be using Postman to make requests. Not to worry if you haven't used it before, it's free and easy to use. Let's download the Postman App and get on to writing our first request: <https://www.postman.com/>
 
-Rebuild a File
-==============
+## Rebuild a File
 
 With Postman open, let's start by clicking 'New' then 'Request'.
 
