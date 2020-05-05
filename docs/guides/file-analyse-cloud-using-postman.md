@@ -57,6 +57,7 @@ What does the response tell us? The Analyse Cloud API processes a file and retur
 -   Content items: Structures within the file.
 -   Remedy items: Structures that deviated from the file types specification that Glasswall will repair.
 -   Sanitisation Items: Active Content within the file that Glasswall will remove.
+- It also includes Issue Items, deviations from the file type specification that cannot be repaired, or content that does not apply to the specified content management policy.
 
 ![](/img/docs/guides/postman-analysis/Analysis_Postman_10.png)
 
