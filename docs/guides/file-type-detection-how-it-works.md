@@ -38,4 +38,4 @@ Please use the product-file-type-detection GitHub repo which also contains the S
 
 **Question:** How can I upload multiple files for file type detection?
 
-**Answer:** Try out our file type detection drop site. You can upload multiple files at once. By default our site uses the public key with which activity is limited.
+**Answer:** Try out our file type detection drop site. You can upload multiple files at once. By default our site uses the public key with which activity is limited. <https://filetrust.github.io/product-file-type-detection/#/drop>
