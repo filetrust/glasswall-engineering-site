@@ -26,17 +26,16 @@ Here are all the different types of files the Glasswall Rebuild engine detects u
 
 ### Consuming the API
 Once you have your API key by email, use this web UI or this Swagger UI (shown in the video below) to start the service and test your files:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pEvt85P7Y9Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe)]()>
+[![](http://img.youtube.com/vi/pEvt85P7Y9Y/0.jpg)](http://www.youtube.com/watch?v=pEvt85P7Y9Y "")
 
 ### Support and Feedback
 Please use the product-file-type-detection GitHub repo which also contains the Swagger UI code. Open an Issue with any bugs/issues that you discover or provide feedback on how we can make this service better.
 
 ### FAQs
-Question: Where can I access the API?
+**Question:** Where can I access the API?
 
-Answer: Check out our swagger page that provides documentation on the API itself
+**Answer:** Check out our swagger page that provides documentation on the API itself
 
-Question: How can I upload multiple files for file type detection?
+**Question:** How can I upload multiple files for file type detection?
 
-Answer: Try out our file type detection drop site. You can upload multiple files at once. By default our site uses the public key with which activity is limited.
+**Answer:** Try out our file type detection drop site. You can upload multiple files at once. By default our site uses the public key with which activity is limited.
