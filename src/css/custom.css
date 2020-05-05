@@ -4,9 +4,10 @@
  * work well for content-centric websites.
  */
 
+
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #3498db;
+  --ifm-color-primary: #1BA6B5;
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
@@ -14,7 +15,17 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+  --ifm-font-family-base: "Nunito Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --ifm-navbar-link-hover-color: #1BA6B5;
+  --ifm-menu-color-active: #1BA6B5;
+  --ifm-link-color: #1BA6B5;
 }
+
+html[data-theme='dark'] {
+
+  --ifm-font-color-base-inverse: white;
+}
+
 
 .docusaurus-highlight-code-line {
   background-color: #3498db;
@@ -26,3 +37,30 @@
 .button--lg {
   color: white;
 }
+
+.hero, .footer {
+  background: linear-gradient(90deg, #0c3451 35%, #186480 100%);
+}
+
+.hero .button.button--secondary.button--outline:not(.button--active):not(:hover) {
+  color: #ffffff;
+}
+
+.sun_node_modules-\@docusaurus-theme-classic-src-theme-Toggle-::before {
+  content: '' !important;
+  display: block;
+  width: 19px;
+  height: 17px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 17'%3E%3Ccircle fill='%23FFF' cx='9.5' cy='8.5' r='4.17'/%3E%3Cpath fill='none' stroke='%23FFF' stroke-miterlimit='10' d='M3.83 8.5H1M6.67 13.41l-1.42 2.45M12.33 13.41l1.42 2.45M15.17 8.5H18M12.33 3.59l1.42-2.45M6.67 3.59L5.25 1.14'/%3E%3C/svg%3E");
+}
+
+.moon_node_modules-\@docusaurus-theme-classic-src-theme-Toggle-::before {
+  content: '' !important;
+  display: block;
+  width: 19px;
+  height: 17px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 17'%3E%3Cpath fill='%23FFF' d='M11.11 3.01c.45 1.13.61 2.41.38 3.74-.44 2.53-2.36 4.63-4.82 5.33-.91.26-1.78.32-2.62.23-.48-.05-.76.53-.4.86 1.5 1.35 3.6 2.04 5.85 1.62 2.69-.5 4.86-2.65 5.38-5.34.57-2.95-.76-5.64-2.98-7.07-.45-.29-.99.14-.79.63z'/%3E%3C/svg%3E");
+}
+
+
+
