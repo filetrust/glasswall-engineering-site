@@ -80,7 +80,6 @@ We can view a generated snippet that performs the request and there is a whole r
 
 For more information, please see our Swagger documentation below:
 
-Swagger for Glasswall's Analyse API: [https://filetrust.github.io/product-saas-analyse/](https://filetrust.github.io/product-saas-analyse/#/)
 
 Swagger for Glasswall's Rebuild API: [https://filetrust.github.io/product-saas-rebuild/](https://filetrust.github.io/product-saas-rebuild/#/)
 
