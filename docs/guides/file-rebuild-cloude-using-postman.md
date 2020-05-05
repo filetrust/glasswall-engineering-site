@@ -7,7 +7,7 @@ Glasswall's award winning d-FIRST SDK is now available as a cloud API with two f
 API Key
 =======
 
-Before we begin, we will need a valid Glasswall Cloud API key. If you are reading this you may already have one. If not, trial keys are free so please get in touch: <https://glasswallsolutions.com/contact/>
+Before we begin, we will need a valid Glasswall Cloud API key. If you are reading this you may already have one. If not, trial keys are free so please get in touch: <https://glasswallsolutions.com/contact/> or visit <https://glasswall-store.com/> to make a purchase.
 
 Postman --- API Development
 =========================
