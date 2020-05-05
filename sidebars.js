@@ -1,8 +1,22 @@
 module.exports = {
   someSidebar: {
-	Products:[
-		"product-descriptions/description-rebuild", "product-descriptions/description-file-type-detection"],
-	Guides:[
+	Products:
+	[
+	"product-descriptions/product-overview",
+		{
+			"Rebuild": [
+				"product-descriptions/description-rebuild",
+				"guides/file-rebuild-how-it-works"
+			],
+			"File Type Detection": [
+			
+				"product-descriptions/description-file-type-detection",
+				"guides/file-type-detection-how-it-works"
+			]
+		}
+	],
+	Guides:
+	[
 	"documentation-and-guides",
 		{
 			"Rebuild" :[

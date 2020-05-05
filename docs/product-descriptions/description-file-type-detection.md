@@ -1,5 +1,6 @@
 ---
 title: File Type Detection
+sidebar_label: Product Description
 ---
 
 No need to rely on file suffix of mime-type, this product looks into the file structure to establish it's type.
