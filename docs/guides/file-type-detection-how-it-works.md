@@ -24,7 +24,9 @@ Here are all the different types of files the Glasswall Rebuild engine detects u
 ### Consuming the API
 Once you have your API key by email, use this web UI or this Swagger UI (shown in the video below) to start the service and test your files:
 
-[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1588601215/video_to_markdown/images/youtube--pEvt85P7Y9Y-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/embed/pEvt85P7Y9Y "")
+<figure class="video_container">
+  <iframe src="https://www.youtube.com/embed/pEvt85P7Y9Y" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
 
 ### Support and Feedback
 Please use the product-file-type-detection GitHub repo which also contains the Swagger UI code. Open an Issue with any bugs/issues that you discover or provide feedback on how we can make this service better.
