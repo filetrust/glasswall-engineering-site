@@ -29,6 +29,7 @@ Using the drop down on the left, change from a GET request to a POST request. An
 
 
 Now it's time to input the headers. Select 'Headers' in the ribbon and enter the following key/value pairs:
+
 ```
 Accept : */*
 Content-Type : Multipart/form-data
