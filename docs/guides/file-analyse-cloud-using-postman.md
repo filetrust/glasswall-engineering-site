@@ -15,15 +15,15 @@ In this guide we will be using Postman to make requests. Not to worry if you hav
 
 With Postman open, let's start by clicking 'New' then 'Request'.
 
-![](/img/docs/guides/postman-analysis/img/Analysis_Postman_2.png)
+![](/img/docs/guides/postman-analysis/Analysis_Postman_2.png)
 
 This will open a new request for us to populate.
 
-![](/img/docs/guides/postman-analysis/img/Analysis_Postman_3.png)
+![](/img/docs/guides/postman-analysis/Analysis_Postman_3.png)
 
 Using the drop down on the left, change from a GET request to a POST request. And then input the Analyse Cloud API Direct Endpoint: <https://24dyhnzh5h.execute-api.eu-west-2.amazonaws.com/Beta/az/fileanalysis/analyse>
 
-![](/img/docs/guides/postman-analysis/img/Analysis_Postman_4.png)
+![](/img/docs/guides/postman-analysis/Analysis_Postman_4.png)
 
 Now it's time to input the headers. Select 'Headers' in the ribbon and enter the following key/value pairs:
 
@@ -33,23 +33,23 @@ Now it's time to input the headers. Select 'Headers' in the ribbon and enter the
 >
 > x-api-key : Your Glasswall Cloud API Key
 
-![](/img/docs/guides/postman-analysis/img/Analysis_Postman_5.png)
+![](/img/docs/guides/postman-analysis/Analysis_Postman_5.png)
 
 The final part of the request is to select the file to process. Click 'Body' and enter the key 'file'. Hover over the right-hand side of the field and wait for the drop down to appear. Select 'File'.
 
-![](/img/docs/guides/postman-analysis/img/Analysis_Postman_6.png)
+![](/img/docs/guides/postman-analysis/Analysis_Postman_6.png)
 
 We're getting there... Let's find our test files. The API currently supports a maximum file size of 10MB. The supported file types are: Binary Office, Office XML, PDF, PNG, JPG and GIF.
 
-![](/img/docs/guides/postman-analysis/img/Analysis_Postman_7.png)
+![](/img/docs/guides/postman-analysis/Analysis_Postman_7.png)
 
 Back to Postman, click the 'VALUE' field and then use file explorer to locate your test file.
 
-![](/img/docs/guides/postman-analysis/img/Analysis_Postman_8.png)
+![](/img/docs/guides/postman-analysis/Analysis_Postman_8.png)
 
 Nice! We have setup our first request. Let's hit 'Send' and look at the response.
 
-![](/img/docs/guides/postman-analysis/img/Analysis_Postman_9.png)
+![](/img/docs/guides/postman-analysis/Analysis_Postman_9.png)
 
 Congratulations! You have made your first request to the Glasswall API.
 
@@ -59,7 +59,7 @@ What does the response tell us? The Analyse Cloud API processes a file and retur
 -   Remedy items: Structures that deviated from the file types specification that Glasswall will repair.
 -   Sanitisation Items: Active Content within the file that Glasswall will remove.
 
-![](/img/docs/guides/postman-analysis/img/Analysis_Postman_10.png)
+![](/img/docs/guides/postman-analysis/Analysis_Postman_10.png)
 
 
 
