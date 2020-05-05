@@ -1,4 +1,4 @@
-﻿![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_1.png)
+﻿![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_1.png)
 
 Glasswall regenerates clean, safe and visually identical files in milliseconds, securing your organisation without compromise.
 
@@ -19,15 +19,15 @@ Analyse a File
 
 With Postman open, let's start by clicking 'New' then 'Request'.
 
-![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_2.png)
+![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_2.png)
 
 This will open a new request for us to populate.
 
-![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_3.png)
+![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_3.png)
 
 Using the drop down on the left, change from a GET request to a POST request. And then input the Analyse Cloud API Direct Endpoint: <https://24dyhnzh5h.execute-api.eu-west-2.amazonaws.com/Beta/az/fileanalysis/analyse>
 
-![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_4.png)
+![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_4.png)
 
 Now it's time to input the headers. Select 'Headers' in the ribbon and enter the following key/value pairs:
 
@@ -37,23 +37,23 @@ Now it's time to input the headers. Select 'Headers' in the ribbon and enter the
 >
 > x-api-key : Your Glasswall Cloud API Key
 
-![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_5.png)
+![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_5.png)
 
 The final part of the request is to select the file to process. Click 'Body' and enter the key 'file'. Hover over the right-hand side of the field and wait for the drop down to appear. Select 'File'.
 
-![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_6.png)
+![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_6.png)
 
 We're getting there... Let's find our test files. The API currently supports a maximum file size of 10MB. The supported file types are: Binary Office, Office XML, PDF, PNG, JPG and GIF.
 
-![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_7.png)
+![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_7.png)
 
 Back to Postman, click the 'VALUE' field and then use file explorer to locate your test file.
 
-![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_8.png)
+![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_8.png)
 
 Nice! We have setup our first request. Let's hit 'Send' and look at the response.
 
-![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_9.png)
+![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_9.png)
 
 Congratulations! You have made your first request to the Glasswall API.
 
@@ -63,7 +63,7 @@ What does the response tell us? The Analyse Cloud API processes a file and retur
 -   Remedy items: Structures that deviated from the file types specification that Glasswall will repair.
 -   Sanitisation Items: Active Content within the file that Glasswall will remove.
 
-![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_10.png)
+![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_10.png)
 
 Now let's regenerate our file by making a call to the Rebuild cloud API.
 
@@ -72,7 +72,7 @@ Rebuild a File
 
 Not much needs to be changed from above. Let's start by using the Rebuild API Direct Endpoint: <https://24dyhnzh5h.execute-api.eu-west-2.amazonaws.com/Beta/az/filerebuild/rebuild>
 
-![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_11.png)
+![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_11.png)
 
 This bit is nice and easy... The Body and Header configuration stay the same as the Analyse request.
 
@@ -83,13 +83,13 @@ The Rebuild Cloud API takes in a file and returns a protected file that has:
 -   All structural deviations from the file types specifications remediated (fixed/repaired).
 -   All Active Content within the file sanitised (removed).
 
-![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_12.png)
+![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_12.png)
 
 The details of all remediation and sanitisation actions can be found using the Analyse API detailed in the section above.
 
 Let's turn this response into a usable file. Find the 'Save Response' drop down and click 'Save to a file'.
 
-![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_13.png)
+![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_13.png)
 
 There we have it! One Glasswall protected file, hot off the press.
 
@@ -99,12 +99,12 @@ API Integration
 While this is a nice way to test and get familiar with the Glasswall Cloud API, we want to create programs that do the heavy lifting. By clicking 'Code' in Postman after making a request...
 
 
-![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_14.png)
+![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_14.png)
 
 We can view a generated snippet that performs the request and there is a whole range of supported languages. Here we can see our Analyse request in curl.
 
 
-![](static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_15.png)
+![](/static/img/docs/guides/postman-rebuild/img/Rebuild_Postman_15.png)
 
 For more information, please see our Swagger documentation below:
 
