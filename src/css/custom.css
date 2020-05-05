@@ -47,5 +47,9 @@ html[data-theme='dark'] {
 }
 
 
+.footer .container > div:last-of-type {
+  font-size: 12px;
+}
+
 
 
