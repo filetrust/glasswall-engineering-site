@@ -56,10 +56,12 @@ function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
+    
     <Layout
       title={`Trust every file with Glasswall Solutions`}
       description="The online knowledge base for Glasswall technologies and products, with code examples and detailed CDR Use Cases."
     >
+      <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet" /> 
       <header className={classnames("hero hero--primary", styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
