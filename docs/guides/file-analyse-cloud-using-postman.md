@@ -26,11 +26,12 @@ Using the drop down on the left, change from a GET request to a POST request. An
 ![](/img/docs/guides/postman-analysis/Analysis_Postman_4.png)
 
 Now it's time to input the headers. Select 'Headers' in the ribbon and enter the following key/value pairs:
-<pre><code>
+
+```
  Accept : */*
  Content-Type : Multipart/form-data
  x-api-key : Your Glasswall Cloud API Key
-</code></pre>
+```
 
 ![](/img/docs/guides/postman-analysis/Analysis_Postman_5.png)
 
