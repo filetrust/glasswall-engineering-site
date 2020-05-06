@@ -22,7 +22,7 @@ Here are all the different types of files the Glasswall Rebuild engine detects u
 
 ### Consuming the API
 
-Once you have your API key by email, use this web UI or this Swagger UI (shown in the video below) to start the service and test your files:
+Once you have your API key by email, use this web UI <https://filetrust.github.io/product-file-type-detection/#/drop> or this Swagger UI <https://filetrust.github.io/product-file-type-detection/#/default/post_api_FileTypeDetection> (shown in the video below) to start the service and test your files:
 
 [![](http://img.youtube.com/vi/pEvt85P7Y9Y/0.jpg)](http://www.youtube.com/watch?v=pEvt85P7Y9Y "")
 
