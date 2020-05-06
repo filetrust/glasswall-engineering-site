@@ -20,7 +20,8 @@ module.exports = {
 	"documentation-and-guides",
 		{
 			"Rebuild" :[
-				"guides/file-rebuild-api-using-aws-sam",			
+				"guides/file-rebuild-api-using-aws-sam",	
+				"guides/file-rebuild-cloud-using-postman",				
 			],
 			"Analysis" :[
 				"guides/file-analyse-using-aws-sam",			

@@ -3,8 +3,11 @@ title: File Type Detection - How it works
 
 sidebar_label: How it works
 ---
+### How File Type Detection Works?
+Along with an API key, users upload files they want to verify. Keys are purchased based on required file volume. The file is analysed by our cloud service with the result returned via a JSON. All uploaded files are immediately destroyed, ensuring complete protection of your data.
 
 Here are all the different types of files the Glasswall Rebuild engine detects using the internal structure of files:
+
 
 | File Types                           | File Description           |
 | ------------------------------------ | -------------------------- |
@@ -39,3 +42,4 @@ Please use the product-file-type-detection GitHub repo which also contains the S
 **Question:** How can I upload multiple files for file type detection?
 
 **Answer:** Try out our file type detection drop site. You can upload multiple files at once. By default our site uses the public key with which activity is limited. <https://filetrust.github.io/product-file-type-detection/#/drop>
+
