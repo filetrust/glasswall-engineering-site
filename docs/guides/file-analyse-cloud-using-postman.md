@@ -1,4 +1,9 @@
-﻿
+﻿---
+title: File Analysis - Using Postman
+
+sidebar_label: Using Postman
+---
+
 Glasswall regenerates clean, safe and visually identical files in milliseconds, securing your organisation without compromise.
 
 Glasswall's award winning d-FIRST SDK is now available as a cloud API File Analyse. If you are looking for an easy way to make your first request to the API, you are in luck as, this guide walks through making a request using Postman.
@@ -58,10 +63,9 @@ What does the response tell us? The Analyse Cloud API processes a file and retur
 -   Content items: Structures within the file.
 -   Remedy items: Structures that deviated from the file types specification that Glasswall will repair.
 -   Sanitisation Items: Active Content within the file that Glasswall will remove.
-- It also includes Issue Items, deviations from the file type specification that cannot be repaired, or content that does not apply to the specified content management policy.
+-   It also includes Issue Items, deviations from the file type specification that cannot be repaired, or content that does not apply to the specified content management policy.
 
 ![](/img/docs/guides/postman-analysis/Analysis_Postman_10.png)
-
 
 
 For more information, please see our Swagger documentation below:

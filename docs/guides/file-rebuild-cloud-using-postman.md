@@ -1,4 +1,11 @@
-﻿![](/img/docs/guides/postman-rebuild/img/Rebuild_Postman_1.png)
+﻿---
+title: File Rebuild - Using Postman
+
+sidebar_label: Using Postman
+---
+
+
+![](/img/docs/guides/postman-rebuild/img/Rebuild_Postman_1.png)
 
 Glasswall regenerates clean, safe and visually identical files in milliseconds, securing your organisation without compromise.
 
@@ -68,8 +75,7 @@ Let's turn this response into a usable file. Find the 'Save Response' drop down 
 
 There we have it! One Glasswall protected file, hot off the press.
 
-API Integration
-===============
+## API Integration
 
 While this is a nice way to test and get familiar with the Glasswall Cloud API, we want to create programs that do the heavy lifting. By clicking 'Code' in Postman after making a request...
 
