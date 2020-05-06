@@ -2,16 +2,23 @@ module.exports = {
   someSidebar: {
 	Products:
 	[
-	"product-descriptions/product-overview",
 		{
-			"Rebuild": [
-				"product-descriptions/description-rebuild",
-				"guides/file-rebuild-how-it-works"
-			],
-			"File Type Detection": [
-			
-				"product-descriptions/description-file-type-detection",
-				"guides/file-type-detection-how-it-works"
+			"Cloud SDK": [
+				"product-descriptions/product-overview",
+				"guides/file-rebuild-how-it-works",
+				"products/cloud-sdk/authentication/authentication-base",
+				"products/cloud-sdk/cloud-sdk-supported-types",
+				{
+					"Rebuild": [
+						"products/cloud-sdk/rebuild/rebuild-quickstart",
+						"products/cloud-sdk/rebuild/rebuild-api",
+						"products/cloud-sdk/rebuild/rebuild-content-management",
+						"products/cloud-sdk/rebuild/rebuild-errors",
+						"products/cloud-sdk/rebuild/rebuild-code-samples"
+					]
+				},
+				"products/cloud-sdk/security/cloud-sdk-security",
+				"products/cloud-sdk/cloud-sdk-faq"
 			]
 		}
 	],
@@ -34,6 +41,8 @@ module.exports = {
 			]
 		}
 	],
-    Features: ["mdx"],
+	"Use Cases":
+	[
+	]
   },
 };
