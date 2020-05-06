@@ -40,4 +40,17 @@ The documentation website uses a simple blob static site with a CDN to improve c
 
 ### Modifying the site
 
-Please use the [Docusarus Documentation](https://v2.docusaurus.io/docs/2.0.0-alpha.43/creating-pages) to see how best to add to the pages.
+Please use the [Docusaurus Creating Pages Documentation](https://v2.docusaurus.io/docs/2.0.0-alpha.43/creating-pages) to see how best to add to the pages.
+
+When adding Markdown documentation the [Docusaurus Markdown Features](https://v2.docusaurus.io/docs/2.0.0-alpha.43/markdown-features) provides a full description. To add references to the Markdown the sidebar needs to be updated. [Docusaurus Sidebar](https://v2.docusaurus.io/docs/2.0.0-alpha.43/sidebar) documents how this is structured.
+
+#### Glasswall notes
+Docusaurus uses a header in each Markdown file to specify the metadata for that page. The [Markdown Header](/https://v2.docusaurus.io/docs/2.0.0-alpha.43/markdown-features#markdown-headers) is enclosed with a line ```---``` above and below it.
+
+![Markdown Header Example](/readme-content/markdown-header-example.png)
+
+Each Markdown document in the engineering Site should be identifiable through its file name (this is used as the file id if none is specified within the file itself).
+
+Each Markdown document should have a ```title``` specified in its header section.
+Where an alternative heading is required to be used in the sidebar, then a ```sidebar_label``` should be specified in the document header.
+
