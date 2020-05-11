@@ -40,7 +40,7 @@ Here are some of the resources which I extracted and found very useful from my r
 Below are 3 flows which present how this new form of authorisation works:
 
 
-![custom-authorizer-flow1](https://github.com/filetrust/glasswall-engineering-site/blob/nad/site/docs/guides/img/custom-authorizer-flow1-purchase-from-store.png)
+![custom-authorizer-flow1](https://github.com/filetrust/glasswall-engineering-site/blob/Nad/site/docs/guides/img/custom-authorizer-flow1-purchase-from-store.png)
 
 ## User Purchases a product from store:
 
@@ -50,6 +50,8 @@ Below are 3 flows which present how this new form of authorisation works:
 4. Amazon SES is invoked with access credentials which the user will need to generate a temporary JWT.
 5. User receives an email.
 
+
+
 ![custom-authorizer-flow2](https://github.com/filetrust/glasswall-engineering-site/blob/Nad/site/docs/guides/img/custom-authorizer-flow2-generate-token-from-access-credentials.png)
 
 ## User generates JWT using the access credentials emails to them
@@ -58,6 +60,8 @@ Below are 3 flows which present how this new form of authorisation works:
 2. The Lambda query&#39;s the database to get the user information based on the credentials provided.
 3. The Lambda creates the JWT.
 4. The JWT is returned to the user as a JSON response.
+
+
 
 ![custom-authorizer-flow3](https://github.com/filetrust/glasswall-engineering-site/blob/Nad/site/docs/guides/img/custom-authorizer-flow3-lambda-authoriser.png)
 
