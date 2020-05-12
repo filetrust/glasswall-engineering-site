@@ -3,26 +3,35 @@ module.exports = {
 	Products:
 	[
 		{
-			"Cloud SDK": [
+			"Rebuild API": [
 				"product-descriptions/product-overview",
 				"guides/file-rebuild-how-it-works",
 				"products/cloud-sdk/authentication/authentication-base",
+				"products/cloud-sdk/secure-url/using-secure-urls",
 				"products/cloud-sdk/cloud-sdk-supported-types",
 				{
 					"Rebuild": [
-						"products/cloud-sdk/rebuild/rebuild-quickstart",
+						{
+							"AWS": [
+								"products/cloud-sdk/rebuild/rebuild-quickstart",
 						"products/cloud-sdk/rebuild/rebuild-api",
 						"products/cloud-sdk/rebuild/rebuild-content-management",
 						"products/cloud-sdk/rebuild/rebuild-errors",
+						"products/cloud-sdk/security/cloud-sdk-security",
 						"products/cloud-sdk/rebuild/rebuild-code-samples"
+							]
+						},
+						{
+							"Azure (Coming Soon)": [
+							]
+						}
 					]
 				},
-				"products/cloud-sdk/security/cloud-sdk-security",
 				"products/cloud-sdk/cloud-sdk-faq"
 			]
 		}
 	],
-	Guides:
+	"How-To's":
 	[
 	"documentation-and-guides",
 		{
