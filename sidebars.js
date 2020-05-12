@@ -2,20 +2,36 @@ module.exports = {
   someSidebar: {
 	Products:
 	[
-	"product-descriptions/product-overview",
 		{
-			"Rebuild": [
-				"product-descriptions/description-rebuild",
-				"guides/file-rebuild-how-it-works"
-			],
-			"File Type Detection": [
-			
-				"product-descriptions/description-file-type-detection",
-				"guides/file-type-detection-how-it-works"
+			"Rebuild API": [
+				"product-descriptions/product-overview",
+				"guides/file-rebuild-how-it-works",
+				"products/cloud-sdk/authentication/authentication-base",
+				"products/cloud-sdk/secure-url/using-secure-urls",
+				"products/cloud-sdk/cloud-sdk-supported-types",
+				{
+					"Rebuild": [
+						{
+							"AWS": [
+								"products/cloud-sdk/rebuild/rebuild-quickstart",
+						"products/cloud-sdk/rebuild/rebuild-api",
+						"products/cloud-sdk/rebuild/rebuild-content-management",
+						"products/cloud-sdk/rebuild/rebuild-errors",
+						"products/cloud-sdk/security/cloud-sdk-security",
+						"products/cloud-sdk/rebuild/rebuild-code-samples"
+							]
+						},
+						{
+							"Azure (Coming Soon)": [
+							]
+						}
+					]
+				},
+				"products/cloud-sdk/cloud-sdk-faq"
 			]
 		}
 	],
-	Guides:
+	"How-To's":
 	[
 	"documentation-and-guides",
 		{
@@ -34,6 +50,8 @@ module.exports = {
 			]
 		}
 	],
-    Features: ["mdx"],
+	"Use Cases":
+	[
+	]
   },
 };
