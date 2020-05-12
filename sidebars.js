@@ -35,7 +35,10 @@ module.exports = {
 	[
 	"documentation-and-guides",
 		{
-			"Rebuild" :[
+			"CI/CD": [
+			"guides/ci-cd-pipeline"
+			],
+			/* "Rebuild" :[
 				"guides/file-rebuild-api-using-aws-sam",	
 				"guides/file-rebuild-cloud-using-postman",				
 			],
@@ -47,7 +50,7 @@ module.exports = {
 			],
 			"Security" :[
 				"guides/aws-customer-authoriser-api-authorisation-and-access"
-			]
+			] */
 		}
 	],
 	"Use Cases":
