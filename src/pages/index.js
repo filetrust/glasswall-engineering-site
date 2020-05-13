@@ -72,7 +72,7 @@ function Home() {
                 "button button--outline button--secondary button--lg",
                 styles.getStarted
               )}
-              to={useBaseUrl("docs/getting-started")}
+              to={useBaseUrl("docs/products/cloud-sdk/rebuild/rebuild-quickstart")}
             >
               Get Started
             </Link>
