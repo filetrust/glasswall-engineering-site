@@ -73,6 +73,9 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Glasswall Solutions Ltd. Built with Docusaurus.`,
     },
+    gtag: {
+      trackingID: 'UA-165717322-1'
+    }
   },
   presets: [
     [
