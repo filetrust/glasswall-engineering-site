@@ -1,7 +1,5 @@
 ---
 title: AWS Custom Authorizer - API Authorization and Access Proposal – 2 Step solution (recommended)
-
-sidebar_label: API Authorization and Access Proposal 
 ---
 
 # Background and Problem
@@ -41,7 +39,8 @@ Here are some of the resources which I extracted and found very useful from my r
 
 Below are 3 flows which present how this new form of authorisation works:
 
-![](RackMultipart20200429-4-gdnr3w_html_c71aee325e5414ba.jpg)
+
+![custom-authorizer-flow1](https://github.com/filetrust/glasswall-engineering-site/blob/Nad/site/docs/guides/img/custom-authorizer-flow1-purchase-from-store.png)
 
 ## User Purchases a product from store:
 
@@ -51,7 +50,9 @@ Below are 3 flows which present how this new form of authorisation works:
 4. Amazon SES is invoked with access credentials which the user will need to generate a temporary JWT.
 5. User receives an email.
 
-![](RackMultipart20200429-4-gdnr3w_html_cbdf631228ce5507.jpg)
+
+
+![custom-authorizer-flow2](https://github.com/filetrust/glasswall-engineering-site/blob/Nad/site/docs/guides/img/custom-authorizer-flow2-generate-token-from-access-credentials.png)
 
 ## User generates JWT using the access credentials emails to them
 
@@ -60,7 +61,9 @@ Below are 3 flows which present how this new form of authorisation works:
 3. The Lambda creates the JWT.
 4. The JWT is returned to the user as a JSON response.
 
-![](RackMultipart20200429-4-gdnr3w_html_787c4e4895ff1553.jpg)
+
+
+![custom-authorizer-flow3](https://github.com/filetrust/glasswall-engineering-site/blob/Nad/site/docs/guides/img/custom-authorizer-flow3-lambda-authoriser.png)
 
 ## User invokes the product API endpoint
 
