@@ -11,7 +11,7 @@ module.exports = {
       title: "Glasswall Engineering",
       logo: {
         alt: "Glasswall Logo",
-        src: "img/glasswall_logo_blue.png",
+        src: "img/glasswall_logo_blue.png"        
       },
       links: [
         {
