@@ -15,6 +15,7 @@ module.exports = {
 							"AWS": [
 								"products/cloud-sdk/rebuild/rebuild-quickstart",
 						"products/cloud-sdk/rebuild/rebuild-api",
+						"products/cloud-sdk/architecture/rebuild-architecture",
 						"products/cloud-sdk/rebuild/rebuild-content-management",
 						"products/cloud-sdk/rebuild/rebuild-errors",
 						"products/cloud-sdk/security/cloud-sdk-security",
