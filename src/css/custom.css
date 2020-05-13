@@ -70,3 +70,47 @@ html[data-theme='dark'] {
 
 
 
+
+
+
+.api-details-column {
+  float: left;
+  width: 50%;
+}
+
+.api-details:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.api-details-example {
+  padding-left: 10px;
+}
+
+.api-details-example-top {
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-bottom: thick;
+  background-color: rgb(12, 52, 81, .5);
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom-color: black;
+  transform: up;
+}
+
+.api-details-example-body {
+  border-bottom: thick;
+  /* background-color: rgb(52, 152, 219, .4); */
+  background-color: rgba(61, 61, 61, 0.4);
+  border-bottom-left-radius: 1em;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom-right-radius: 1em;
+}
+
+.post {
+  color: green;
+}

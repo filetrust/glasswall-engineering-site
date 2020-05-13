@@ -11,7 +11,7 @@ module.exports = {
       title: "Glasswall Engineering",
       logo: {
         alt: "Glasswall Logo",
-        src: "img/glasswall_logo_blue.png",
+        src: "img/glasswall_logo_blue.png"        
       },
       links: [
         {
@@ -40,7 +40,7 @@ module.exports = {
           items: [
             {
               label: "Getting Started",
-              to: "docs/getting-started",
+              to: "docs/products/cloud-sdk/rebuild/rebuild-quickstart",
             },
           ],
         },

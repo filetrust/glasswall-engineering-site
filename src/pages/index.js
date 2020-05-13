@@ -10,6 +10,7 @@ const features = [
   {
     title: <>Products</>,
     imageUrl: "img/product-illustration-01.png",
+    imageLinkTo: "docs/product-descriptions/product-overview",
     description: (
       <>
         Product descriptions providing detailed information on the features offered, the benefits to users and the technologies involved.
@@ -19,6 +20,7 @@ const features = [
   {
     title: <>Documentation</>,
     imageUrl: "img/documentation-illustration-02.png",
+    imageLinkTo: "docs/product-descriptions/product-overview",
     description: (
       <>
         Provides develpers all the information required to use the Glasswall products 
@@ -29,6 +31,7 @@ const features = [
   {
     title: <>Use Cases</>,
     imageUrl: "img/use-cases-illustration-03.png",
+    imageLinkTo: "docs/use-cases/overview",
     description: (
       <>
         How can the Glasswall Products help you. We've provided a number of use cases that cover common scenarios.
@@ -37,13 +40,15 @@ const features = [
   },
 ];
 
-function Feature({ imageUrl, title, description }) {
+function Feature({ imageUrl, title, description, imageLinkTo }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={classnames("col col--4", styles.feature)}>
       {imgUrl && (
         <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
+          <Link to={imageLinkTo}>
+            <img className={styles.featureImage} src={imgUrl} alt={title} />
+          </Link>
         </div>
       )}
       <h3>{title}</h3>
@@ -72,7 +77,7 @@ function Home() {
                 "button button--outline button--secondary button--lg",
                 styles.getStarted
               )}
-              to={useBaseUrl("docs/getting-started")}
+              to={useBaseUrl("docs/products/cloud-sdk/rebuild/rebuild-quickstart")}
             >
               Get Started
             </Link>
