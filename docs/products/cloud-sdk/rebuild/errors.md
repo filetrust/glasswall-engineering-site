@@ -24,5 +24,8 @@ The file you are sending via HTTP request body is over 6mb. Due to the limitatio
 ### 422 Unprocessable Entity
 Some files we just cannot make better, sometimes it is because we don't currently support the file type that has been sent to us. Other times the files are so broken we just cannot put them back together safely. If this happens then you will get this 422 response, the response body will indicate whether it was an unsupported (unknown) file type or the file simply had issues we couldn't resolve.
 
+### 429 Too Many Requests
+This is primarily for the shared platform where each API Key is rate limited for fair usage, if you are getting this error it is an indication that you may need to move to the dedicated cloud where you can have a higher concurrency limit.
+
 ### 500 Internal Server Error
 This error should rarely happen, if it does, that's our bad. Report it to us by raising an issue on our [GitHub](https://github.com/filetrust) pages and we will endevour to fix the issue.
