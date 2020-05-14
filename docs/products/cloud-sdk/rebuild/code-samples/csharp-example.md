@@ -11,8 +11,7 @@ In this example files are loaded from the OS and a request with the content type
 
 The rebuilt file is returned as Base64, decoded by the client and written to disk.
 
-```C#
-
+```csharp
 using System;
 using System.Globalization;
 using System.IO;
@@ -114,14 +113,13 @@ namespace RebuildAPI.Example
         }
     }
 }
-
 ```
 
 ## api/rebuild
 
 In this example a file is downloaded from an input URL with a GET operation and its contents are rebuilt. The rebuilt file is then uploaded to the specified output URL using a PUT operation.
 
-```c#
+```csharp
 
 using System;
 using System.Net.Http;
