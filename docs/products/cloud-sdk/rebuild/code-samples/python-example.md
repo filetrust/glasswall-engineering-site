@@ -109,4 +109,5 @@ for root, dirs, files in os.walk(directory):
             # glasswall successfully sanitised this file, write it to the new directory
             os.makedirs(os.path.dirname(output_file), exist_ok=True)
             with open(output_file, "wb") as f:
+                f.write(response.content)
 ```
