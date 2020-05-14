@@ -14,7 +14,7 @@ This sequence diagram shows what is occuring within the Rebuild lambda function,
 
 ![Figure2](/img/Rebuild-File-Sequence.png)
 
-This is a great way to quickly get file-in, file-out but because we can't have a payload to the lambda function larger than 6mb we need a second pathway.
+This is a great way to quickly get file-in, file-out but because we can't have a payload to the lambda function larger than **6mb** we need a second pathway.
 
 ### File in via authenticated URLs
 

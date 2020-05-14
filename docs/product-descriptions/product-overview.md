@@ -15,7 +15,7 @@ The limitation of this pathway is from the serverless computing platform we are 
 
 If you know that this limit is too restrictive then the pathway for you is to pass a secured URL. An example of this is a signed S3 url, this provides time limited access to a file (see our FAQ section for the permissions required).
 
-This pathway then supports files up to 2GB in size, the rebuilt files are then placed in an output storage location accessed by a secured URL. 
+The rebuilt files is placed in an output storage location accessed by a secured URL. 
 
 
 
