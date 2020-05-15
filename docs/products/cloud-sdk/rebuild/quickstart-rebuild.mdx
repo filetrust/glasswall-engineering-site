@@ -84,15 +84,16 @@ using System.Threading.Tasks;
 <TabItem value="nodejs">
 
 ```javascript
-const api_key = "YOUR API KEY";
+const apiKey = "YOUR API KEY";
 const inputFilePath = "INPUT FILE PATH";
+const url = "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/rebuild/file";
 
 const options = {
     "encoding": null,
     "method": "POST",
-    "url": "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/Rebuild/file",
+    "url": url,
     "headers": {
-        "x-api-key": api_key,
+        "x-api-key": apiKey,
         'Accept': 'application/octet-stream'
     },
     formData: {
@@ -111,8 +112,8 @@ const options = {
 <TabItem value="py">
 
 ```python
-api_key = "YOUR_API_KEY"
-input_file = "Input File"
+api_key = "YOUR API KEY"
+input_file = "INPUT FILE PATH"
 url = "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/rebuild/file"
 ​
 ​with open(input_file, "rb") as f:
@@ -129,10 +130,11 @@ url = "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/rebuild/f
 <TabItem value="c#">
 
 ```csharp
-const string apiKey = "dp2Ug1jtEh4xxFHpJBfWn9V7fKB3yVcv60lhwOAG";
-const string inputFilePath = "C:\\Users\\Seb\\Downloads\\146257(1).pdf";
+const string apiKey = "YOUR API KEY";
+const string inputFilePath = "INPUT FILE PATH";
+const url = "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/rebuild/file";
 
-var request = new HttpRequestMessage(HttpMethod.Post, "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/Rebuild/file");
+var request = new HttpRequestMessage(HttpMethod.Post, url);
 request.Headers.Add("Accept", "application/octet-stream");
 request.Headers.Add("x-api-key", apiKey);
 
@@ -220,8 +222,7 @@ using (var client = new HttpClient())
 <TabItem value="nodejs">
 
 ```javascript
-
-const outputFilePath = "Output Rebuilt File Path"
+const outputFilePath = "Rebuilt File Output Path"
 
 // callback passed to request
 request(options, function (error, res) {
@@ -242,9 +243,11 @@ request(options, function (error, res) {
 <TabItem value="py">
 
 ```python
+const output_file_path = "Rebuilt File Output Path"
+
 if response.status_code == 200 and response.content:
-  os.makedirs(os.path.dirname(output_file), exist_ok=True)
-  with open(output_file, "wb") as f:
+  os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
+  with open(output_file_path, "wb") as f:
     f.write(response.content)
 ```
 
@@ -252,12 +255,12 @@ if response.status_code == 200 and response.content:
 <TabItem value="c#">
 
 ```csharp
+const outputFilePath = "Rebuilt File Output Path"
+
 // message is the result of SendAsync
 if (message.StatusCode == HttpStatusCode.OK && message.Content != null)
 {
   var rebuiltFile = await message.Content.ReadAsByteArrayAsync();
-
-  const string outputFilePath = "Output file path";
 
   System.IO.File.WriteAllBytes(outputFilePath, rebuiltFile);
 }
