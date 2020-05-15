@@ -19,4 +19,3 @@ Here are all the different types of files the Glasswall Rebuild engine detects u
 | XPPTX POTX POTM PPTM PPSX PPAM PPSM  | MS PowerPoint 2003 & later |
 | WAV MP3                              | Audio                      |
 | MPG MP4                              | Video                      |
-| PE DLL MUI EXE MACH-O COFF ELF       | Portable executables       |
