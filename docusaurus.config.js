@@ -1,6 +1,6 @@
 module.exports = {
   title: "Glasswall Engineering",
-  tagline: "Trust every file",
+  tagline: "Trust Every File",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   favicon: "img/favicon.ico",
