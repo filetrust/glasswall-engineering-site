@@ -222,8 +222,7 @@ using (var client = new HttpClient())
 <TabItem value="nodejs">
 
 ```javascript
-
-const outputFilePath = "Output Rebuilt File Path"
+const outputFilePath = "Rebuilt File Output Path"
 
 // callback passed to request
 request(options, function (error, res) {
@@ -244,9 +243,11 @@ request(options, function (error, res) {
 <TabItem value="py">
 
 ```python
+const output_file_path = "Rebuilt File Output Path"
+
 if response.status_code == 200 and response.content:
-  os.makedirs(os.path.dirname(output_file), exist_ok=True)
-  with open(output_file, "wb") as f:
+  os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
+  with open(output_file_path, "wb") as f:
     f.write(response.content)
 ```
 
@@ -254,12 +255,12 @@ if response.status_code == 200 and response.content:
 <TabItem value="c#">
 
 ```csharp
+const outputFilePath = "Rebuilt File Output Path"
+
 // message is the result of SendAsync
 if (message.StatusCode == HttpStatusCode.OK && message.Content != null)
 {
   var rebuiltFile = await message.Content.ReadAsByteArrayAsync();
-
-  const string outputFilePath = "Output file path";
 
   System.IO.File.WriteAllBytes(outputFilePath, rebuiltFile);
 }
