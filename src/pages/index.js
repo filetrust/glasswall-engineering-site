@@ -13,7 +13,7 @@ const features = [
     imageLinkTo: "docs/product-descriptions/product-overview",
     description: (
       <>
-        Product descriptions providing detailed information on the features offered, the benefits to users and the technologies involved.
+        Product descriptions with detailed information on features and benefits.
       </>
     ),
   },
@@ -23,8 +23,7 @@ const features = [
     imageLinkTo: "docs/product-descriptions/product-overview",
     description: (
       <>
-        Provides develpers all the information required to use the Glasswall products 
-	with example code in a variety of languages and step by step guides.
+        Provides developers all information required to use Glasswall with example code in a variety of languages and step-by-step guides.
       </>
     ),
   },
@@ -34,7 +33,7 @@ const features = [
     imageLinkTo: "docs/use-cases/overview",
     description: (
       <>
-        How can the Glasswall Products help you. We've provided a number of use cases that cover common scenarios.
+        How can Glasswall help you? We've provided use cases that cover common scenarios.
       </>
     ),
   },
@@ -63,7 +62,7 @@ function Home() {
   return (
     
     <Layout
-      title={`Trust every file with Glasswall Solutions`}
+      title={`Trust Every File - Glasswall Engineering`}
       description="The online knowledge base for Glasswall technologies and products, with code examples and detailed CDR Use Cases."
     >
       <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet" /> 
