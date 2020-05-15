@@ -40,7 +40,7 @@ Here are some of the resources which I extracted and found very useful from my r
 Below are 3 flows which present how this new form of authorisation works:
 
 
-![custom-authorizer-flow1](https://github.com/filetrust/glasswall-engineering-site/blob/Nad/site/docs/guides/img/custom-authorizer-flow1-purchase-from-store.png)
+![custom-authorizer-flow1](https://github.com/filetrust/glasswall-engineering-site/blob/master/docs/guides/img/custom-authorizer-flow1-purchase-from-store.png)
 
 ## User Purchases a product from store:
 
@@ -52,7 +52,8 @@ Below are 3 flows which present how this new form of authorisation works:
 
 
 
-![custom-authorizer-flow2](https://github.com/filetrust/glasswall-engineering-site/blob/Nad/site/docs/guides/img/custom-authorizer-flow2-generate-token-from-access-credentials.png)
+
+![custom-authorizer-flow2](https://github.com/filetrust/glasswall-engineering-site/blob/master/docs/guides/img/custom-authorizer-flow2-generate-token-from-access-credentials.png)
 
 ## User generates JWT using the access credentials emails to them
 
@@ -63,7 +64,8 @@ Below are 3 flows which present how this new form of authorisation works:
 
 
 
-![custom-authorizer-flow3](https://github.com/filetrust/glasswall-engineering-site/blob/Nad/site/docs/guides/img/custom-authorizer-flow3-lambda-authoriser.png)
+
+![custom-authorizer-flow3](https://github.com/filetrust/glasswall-engineering-site/blob/master/docs/guides/img/custom-authorizer-flow3-lambda-authoriser.png)
 
 ## User invokes the product API endpoint
 
