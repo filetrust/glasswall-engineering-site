@@ -40,7 +40,6 @@ module.exports = {
 			],
 		"How-To's":
 			[
-				"documentation-and-guides",
 				{
 					"CI/CD": [
 						"guides/ci-cd-pipeline"
