@@ -5,7 +5,7 @@ sidebar_label: Overview
 
 The Rebuild API provides developers the pathway to obtaining safe and secure files. It combines the battle hardened capabilities of our Rebuild SDK with the scalability and performance of a cloud solution.
 
-The simplest way to start using is to purchase credentials from our [store](https://glasswall-store.com/) and go to one of our quickstarts ([Rebuild](https://engineering.glasswallsolutions.com/docs/products/cloud-sdk/rebuild/rebuild-quickstart))
+The simplest way to start using is to purchase credentials from our [store](https://glasswall-store.com/) and go to one of our quickstarts ([Rebuild](https://engineering.glasswallsolutions.com/docs/products/cloud-sdk/rebuild/rebuild-quickstart)).
 
 The Rebuild API resources come in 2 general pathways: Direct File & Secured URL.
 
