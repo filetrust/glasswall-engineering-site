@@ -8,7 +8,7 @@ The Rebuild API provides developers the pathway to obtaining safe and secure fil
 The simplest way to start using is to purchase credentials from our [store](https://glasswall-store.com/) and go to one of our quickstarts ([Rebuild](https://engineering.glasswallsolutions.com/docs/products/cloud-sdk/rebuild/rebuild-quickstart)).
 
 :::caution
-Before you intergrate Rebuild into your solution, be aware that file in the HTTP body only supports files up to 6MB due to a limitation in the request payload to AWS Lambda. If your use case deals with larger files, please use the input URL based pathway which currently supports files up to 30MB
+Before you integrate Rebuild into your solution, be aware that file in the HTTP body only supports files up to 6MB due to a limitation in the request payload to AWS Lambda. If your use case deals with larger files, please use the input URL based pathway which currently supports files up to 30MB
 :::caution
 
 The Rebuild API resources come in 2 general pathways: Direct File & Secured URL.
