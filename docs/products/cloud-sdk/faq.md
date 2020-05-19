@@ -17,7 +17,7 @@ Yes, the internal term for these files are "Humpty Dumpty" files, so broken they
 No files are stored in the rebuild proces beyond the regenerated file being persisted to an output folder. Files may be stored as part of future calls but that would only be when there was a clear benefit or use case to do so. All of the Rebuild API code is available on our [GitHub](https://github.com/filetrust).
 
 ### I am receiving 429 responses, what does this mean?
-On the shared platform the amount and rate of calling our API is controlled by a usage plan. By default accounts on our shared platform are limited to 100 request per second. Exceeding these rates results in throttling and the appearance of the 429 HTTP code response. If this is an issue, you might want to consider moving to our dedicated model where the full rate can be assigned.
+On the shared platform the amount and rate of calling our API is controlled by a usage plan. By default accounts on our shared platform are limited to 50 requests per second. Exceeding these rates results in throttling and the appearance of the 429 HTTP code response. If this is an issue, you might want to consider moving to our dedicated model where the full rate can be assigned.
 
 ### What is the maximum size of file you support?
 We have 2 pathways into the Rebuild functionality - file in the HTTP request supports files up to 6mb, files via input URL can go up to 30mb. The URL pathway does not formally limit the file size, whether the file is processed larger than the limit is purely down to the memory consuption of rebuilding the file + the 29 second max timeout of the API Gateway.
