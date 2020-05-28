@@ -17,5 +17,3 @@ Here are all the different types of files the Glasswall Rebuild engine detects u
 | DOCX DOCM DOTX DOTM                  | MS Word 2003 & later       |
 | XLSX XLAM XLSM XLTX XLTM             | MS Excel 2003 & later      |
 | XPPTX POTX POTM PPTM PPSX PPAM PPSM  | MS PowerPoint 2003 & later |
-| WAV MP3                              | Audio                      |
-| MPG MP4                              | Video                      |

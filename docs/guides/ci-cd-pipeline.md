@@ -6,6 +6,7 @@ sidebar_label: CI/CD Setup
 
 This guide will walk through the steps to set-up and create a CI/CD pipeline for your GitHub Repository
 
+![](/img/CI-CD.png)
 ## Steps
 ### Branch Policy
 1. On the GitHub repo, create a new branch from 'master' called 'develop'
