@@ -1,11 +1,11 @@
 module.exports = {
   title: "Glasswall Engineering",
   tagline: "Trust Every File",
-  url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/",
+  url: "https://filetrust.github.io",
+  baseUrl: "/glasswall-engineering-site/",
   favicon: "img/favicon.ico",
-  organizationName: "Glasswall", // Usually your GitHub org/user name.
-  projectName: "Glasswall Engineering", // Usually your repo name.
+  organizationName: "filetrust", // Usually your GitHub org/user name.
+  projectName: "glasswall-engineering-site", // Usually your repo name.
   themeConfig: {
     navbar: {
       title: "Glasswall Engineering",
