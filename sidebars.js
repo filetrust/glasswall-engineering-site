@@ -58,7 +58,7 @@ module.exports = {
 						"guides/aws-customer-authoriser-api-authorisation-and-access"
 					] */
 				},
-				{
+				/* {
 					"Use Cases": [
 						"use-cases/Overview",
 						{
@@ -71,7 +71,7 @@ module.exports = {
 							]
 						}
 					]
-				}
+				} */
 			]
 	},
 };
