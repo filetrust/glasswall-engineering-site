@@ -1,0 +1,36 @@
+name: CD
+
+on:
+  push:
+    branches: staging
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - uses: actions/setup-node@v1
+
+    - name: Installation ⏳
+      run: yarn
+   
+    - name: Build 🧱
+      run: yarn build
+        
+    # - name: SonarCloud Scan 🔍
+    #   uses: SonarSource/sonarcloud-github-action@v1.2
+    #   with:
+    #     projectBaseDir: .
+    #   env:      
+    #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}     
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: master
+        FOLDER: build
