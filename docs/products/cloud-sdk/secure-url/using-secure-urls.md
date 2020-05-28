@@ -12,6 +12,16 @@ The benefit of providing files in these URLs is that you can own the storage loc
 
 The minimum requirement for the input URL is that a GET request can be performed that points to a file, this could be an image on Google images for example. A more usable solution would be to utilise the storage solutions offered by some of the cloud providers.
 
+:::info Getting the best processing time performance
+With the Rebuild API components being hosted in AWS there is a clear advantage for using S3 buckets with this service. In addition to that, for the absolute peak processing performance it is advisable to have the bucket in the same AWS region as the endpoint you are using to process.
+
+e.g. https://<span></span>8oiyjy8w63.execute-api.**us-west-2**.amazonaws.com/Prod/api/rebuild 
+
+This endpoint is in the us-west-2 region.
+
+By matching the region the API is able to download & upload the target & rebuilt files much quicker than buckets not in the same region.
+:::info
+
 ### AWS
 
 AWS S3 offers the ability to create presigned URLs - A presigned URL is a URL that provides temporary access to a specific S3 object. Using the URL, a user can be permitted to READ or WRITE an object from / to the S3 bucket. 
