@@ -31,7 +31,7 @@ Opening the file automatically runs a Macro, launching the calculator app. If it
 [Download MS Excel 1997 to 2003 file](https://gw-demo-sample-files-eu1.s3-eu-west-1.amazonaws.com/Opens+calculator+app_macro_MS+excel+97+2003.xls)
 ​
 ​
-## MetaData in a Word document
+## Metadata in a Word document
 ​
 Opening the file, it looks like a benign Word document. The file contains metadata which can be exploited to send malware. You are able to view the metadata stored in the Word document by going to the Properties section in the File menu. Running the file through Rebuild API removes the metadata. 
   
