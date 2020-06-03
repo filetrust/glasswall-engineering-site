@@ -44,4 +44,4 @@ Once the word document is opened, it looks like a plain word document. The file 
 The powerpoints when opened contain a hyperlink, that when followed will take you to google. After it has been passed through glasswall rebuild, the hyperlinks will have been deactivated and you will no longer be able to follow them.  
   
 [Download MS Powerpoint 2003 and later file](https://gw-demo-sample-files-eu1.s3-eu-west-1.amazonaws.com/External+Hyperlink+to+google_Hyperlink_MS+Powerpoint+2003+and+later.pptx)  
-[Download MS Powerpoint 1997 to 2003 file](https://gw-demo-sample-files-eu1.s3-eu-west-1.amazonaws.com/Opens+calculator+app_macro_MS+excel+97+2003.xls)
+[Download MS Powerpoint 1997 to 2003 file](https://gw-demo-sample-files-eu1.s3-eu-west-1.amazonaws.com/External+Hyperlink+to+google_Hyperlink_MS+Powerpoint+97+2003.ppt)
