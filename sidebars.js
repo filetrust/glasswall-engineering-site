@@ -20,13 +20,13 @@ module.exports = {
 										"products/cloud-sdk/rebuild/rebuild-errors",
 										"products/cloud-sdk/security/cloud-sdk-security",
 										{
-										"Code Samples": [
-											"products/cloud-sdk/rebuild/code-samples/python-example",
-											"products/cloud-sdk/rebuild/code-samples/nodejs-example",
-											"products/cloud-sdk/rebuild/code-samples/csharp-example",
-										]
+											"Code Samples": [
+												"products/cloud-sdk/rebuild/code-samples/python-example",
+												"products/cloud-sdk/rebuild/code-samples/nodejs-example",
+												"products/cloud-sdk/rebuild/code-samples/csharp-example",
+											]
 										}
-									]
+									],
 								},
 								{
 									"Azure (Coming Soon)": [
@@ -34,6 +34,7 @@ module.exports = {
 								}
 							]
 						},
+						"products/cloud-sdk/sample-files",
 						"products/cloud-sdk/cloud-sdk-faq"
 					]
 				}
