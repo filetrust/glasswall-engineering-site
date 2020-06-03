@@ -4,28 +4,29 @@ id: sample-files
 sidebar_label: Sample Files
 ---
 ​
-These files have been created to show how glasswall rebuild protects against threats, but the original file content is saved. The files will all look the same before and after being put through file rebuild. All the files use features that can be used by malware.
+This test set has been created to show how Rebuild API regenerates, clean safe and visually identical files. While these test files are not malicious, the set features Active Content that could be manipulated to launch malware.
 ​
 ​
-## Complete works of shakespeare .jpg
+## Complete works of shakespeare.jpg
 ​
 ​
-This file is a jpg, but it is also a zip containing the complete works of shakespeare. To confirm this, convert the file to a .zip file and then unzip using a program like 7zip. You are then able to see 31 files, shakespeares work! Once you run the original jpeg through Glasswall rebuild, and repeat the steps as above, all the files will have been removed, leaving only the .jpg of shakespeare.  
-​  
+This file is a polyglot file (Identifies itself as both a jpg, and a .zip) containing the complete works of William Shakespeare and an image of Shakespeare. To confirm this, rename the file to a .zip file and then unzip using a program like 7zip. You are then able to see 31 files.
+If the original .jpeg file is run through Rebuild API, and steps as above repeated, all the files will have been removed, leaving only the .jpg of Shakespeare.  
+  
 [Download JPG file](https://gw-demo-sample-files-eu1.s3-eu-west-1.amazonaws.com/Complete+works+of+shakespeare+hidden+zip_Polyglot_image.jpg)
 ​
 ​
-## Javascript and embeded files in a PDF
+## JavaScript and embeded files in a PDF
 ​
 ​
-When the pdf is opened with chrome or adobe acrobat, it will open with a pop up. This is due to the pdf containing java script, that upon opening the pdf, runs in the background. Once the pdf has been run through Glasswall rebuild, the pop up will no longer occur, as the javascript has been sanitised, leaving you the safe rebuilt pdf.  
+When the .pdf is opened with Chrome or Acrobat, a pop up appears. This is caused by JavaScript in the .pdf which runs in the background. Rebuild API removes the JavaScript so the pop up no longer appears, delivering a safety regenerated rebuilt file 
   
 [Download PDF file](https://gw-demo-sample-files-eu1.s3-eu-west-1.amazonaws.com/Execute+Java+Script_JS_PDF.pdf)
 ​
-## Macro that opens the calculator app MS excel
+## Macro that opens the calculator app MS Excel
 ​
 ​
-Upon opening the file, the macro runs automatically launching the calculator app (if it does not run automatically you may need to enable macros on excel, once done the app should open). After the excel file has been run through glasswall engine, the macro is sanitised, leaving you a sanitised file. Upon opening the sanitised file, the calculator app will no longer open.  
+Opening the file automatically runs a Macro, launching the calculator app. If it does not run automatically, you may need to enable Macros on Excel. Rebuild API removes the Macro leaving you with a sanitised file. Upon opening the new file, the calculator app will no longer launch. 
   
 [Download MS Excel 2003 and later file](https://gw-demo-sample-files-eu1.s3-eu-west-1.amazonaws.com/Opens+calculator+app_macro_MS+excel+2003+and+later.xlsm)  
 [Download MS Excel 1997 to 2003 file](https://gw-demo-sample-files-eu1.s3-eu-west-1.amazonaws.com/Opens+calculator+app_macro_MS+excel+97+2003.xls)
@@ -33,15 +34,15 @@ Upon opening the file, the macro runs automatically launching the calculator app
 ​
 ## Meta Data in a Word document
 ​
-Once the word document is opened, it looks like a plain word document. The file contains meta data, which can be exploited to send malware. You are able to view the meta data stored in the word document by going to the properties of the file (under file>>info) and more detail. Once the file has been run through glasswall rebuild, the meta data will no longer be viewable.  
+Opening the file, it looks like a benign Word document. The file contains metadata, which can be exploited to send malware. You are able to view the metadata stored in the Word document by going to the Properties section in the File menu. Running the file through Rebuild API removes the metadata. 
   
 [Download MS Word 2003 and later file](https://gw-demo-sample-files-eu1.s3-eu-west-1.amazonaws.com/Contains+Meta+data_Meta+Data_MS+Word+2003+and+later.docx)  
 [Download MS word 1997 to 2003 file](https://gw-demo-sample-files-eu1.s3-eu-west-1.amazonaws.com/Contains+Meta+data_Meta+Data_MS+Word+97+2003v2.doc)
 ​
 ​
-## Hyperlinks in a powerpoint
+## Hyperlinks in a PowerPoint
 ​
-The powerpoints when opened contain a hyperlink, that when followed will take you to google. After it has been passed through glasswall rebuild, the hyperlinks will have been deactivated and you will no longer be able to follow them.  
+The PowerPoint contains a hyperlink that, when followed, will take you to Google. Rebuild API deactivates the hyperlinks. In this case, the URL linked to a benign site, but links to malicious sites would also be neutralised.
   
 [Download MS Powerpoint 2003 and later file](https://gw-demo-sample-files-eu1.s3-eu-west-1.amazonaws.com/External+Hyperlink+to+google_Hyperlink_MS+Powerpoint+2003+and+later.pptx)  
 [Download MS Powerpoint 1997 to 2003 file](https://gw-demo-sample-files-eu1.s3-eu-west-1.amazonaws.com/External+Hyperlink+to+google_Hyperlink_MS+Powerpoint+97+2003.ppt)
