@@ -36,7 +36,7 @@ Every time an item is merged into master the pipeline automatically deploys
 
 The documentation website uses a simple blob static site with a CDN to improve content delivery. Please see the diagram to understand how content gets to our customers.
 
-![Architecture](/readme-content/Engineering-Site.png)
+![Architecture](/readme-content/Engineering-Site.png) 
 
 ### Modifying the site
 
