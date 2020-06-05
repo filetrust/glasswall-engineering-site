@@ -30,6 +30,19 @@ Next step is to set-up a Gated build which will build our code and run tests on 
 3. Copy the Gated file code from the Rebuild repo into the new file
 4. Make any changes specific to your project (build steps, tests used)
 5. Start commit > create new branch and start a pull request
+### Setting Up Serverless Framework
+Next step is to install the Serverless Framework and complete the template. More in-depth guides can be found here: https://www.serverless.com/framework/docs/
+1. If running serverless for the first time, install to your machine by running: `npm install -g serverless` or `choco install serverless`
+2. Create the template by running : `serverless create --template <template name>`, you can get a list of available templates by running `serverless create --help`
+3. Update build.sh and build.cmd files with the correct output location and project location
+4. Complete serverless.yml with the details of your project
+5. Commit changes
+
+You may experience an issue with executing the build.sh file in the CI or CD builds. To fix this you will need to mark the sh file executable:
+1. cd to the sh file location
+2. run: `git update-index --add --chmod=+x build.sh`
+3. commit: `git commit -m 'Make build.sh executable'`
+
 ### CI Build
 Next step is to set-up a CI build which will deploy our code to a QA environment, run tests, and merge to the master branch if successful.
 1. On the GitHub repo, go to Actions > New workflow > set up a workflow yourself
