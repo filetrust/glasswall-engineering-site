@@ -38,6 +38,8 @@ module.exports = {
 					]
 				}
 			],
+		Security: 
+			["GW_Security/Security_Main"],
 		"How-To's":
 			[
 				{
