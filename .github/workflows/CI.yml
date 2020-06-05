@@ -19,11 +19,3 @@ jobs:
    
     - name: Build 🧱
       run: yarn build
-            
-    # - name: SonarCloud Scan 🔍
-    #   uses: SonarSource/sonarcloud-github-action@v1.2
-    #   with:
-    #     projectBaseDir: .
-    #   env:      
-    #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
