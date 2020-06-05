@@ -6,7 +6,7 @@ sidebar_label: Security
 
 # Security Standards - AWS Benchmark
 
-The Glaswall Information Security team has ensured that our AWS premises are compliant with the CIS Amazon Web Services Foundations Benchmark. This is a document provided by CIS (Centre for Internet Security). CIS is s nonprofit organisation that harnesses the power of a global IT community to safeguard public and private organizations against cyber threats. They are responsible for the CIS Controls® and CIS Benchmarks™, globally recognized best practices for securing IT systems and data. You can find more about CIS on this [link](https://www.cisecurity.org/about-us/). The AWS Benchmark document is a guidance for configuring security options for a subset of Amazon Web Services. 
+The Glaswall Information Security team has ensured that our AWS premises are compliant with the CIS Amazon Web Services Foundations Benchmark. This is a document provided by CIS (Centre for Internet Security). CIS is a non-profit organisation that harnesses the power of a global IT community to safeguard public and private organizations against cyber threats. They are responsible for the CIS Controls® and CIS Benchmarks™, globally recognized best practices for securing IT systems and data. You can find more about CIS on this [link](https://www.cisecurity.org/about-us/). The AWS Benchmark document is a guidance for configuring security options for a subset of Amazon Web Services. 
 
 The services included are:
 - AWS Identity and Access Management (IAM)
