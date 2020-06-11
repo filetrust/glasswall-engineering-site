@@ -32,11 +32,11 @@ The Rebuild APIs will accept partial configuration as the Content Management Fla
     <div class="api-details-left api-details-column">
         <p>Our Rebuild API endpoints take the content management policy in the form of a JSON string.</p>
         <p>Here are a list of permitted values for each of the content management flags:</p>
-        <ol>
-            <li>Allow the content</li>
-            <li>Sanitise (Default) the content</li>
-            <li>Disallow the content</li>
-        </ol>
+        <p>
+            <p>0: Allow the content</p>
+            <p>1: Sanitise (Default) the content</p>
+            <p>2: Disallow the content</p>
+        </p>
     </div>
         <div class="api-details-right  api-details-column">
         <div class="api-details-example">
