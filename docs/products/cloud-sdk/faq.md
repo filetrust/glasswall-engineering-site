@@ -7,7 +7,9 @@ sidebar_label: FAQ
 
 ### What if I send a file you do not support?
 
-As part of the rebuild process the Rebuild SDK is used to detect the file type of the file, this is achieved by a structural analysis of the file and not through magic number or file extension. If this analysis determines the file to be an unsuported type the Rebuild API will return a status code of **422 Unprocessable Entity** with a response body indicating the file being unsupported. It is then up to the business logic of the application to decide how to proceed with this file.
+This is fine, in fact we would reccomend it! As part of the rebuild process the Rebuild SDK is used to detect the file type of the file, this is achieved by a structural analysis of the file and not through magic number or file extension. If this analysis determines the file to be an unsuported type the Rebuild API will return a status code of **422 Unprocessable Entity** with a response body indicating the file being unsupported. It is then up to the business logic of the application to decide how to proceed with this file.
+
+By removing the burden from your application of deciding which files to send means that your business logic can remain the same even when we add an additional supported file type. It more importantly protects you from masquerading files where the extension states a type but the file structure is actually another.
 
 ### Are there files which you cannot rebuild?
 
