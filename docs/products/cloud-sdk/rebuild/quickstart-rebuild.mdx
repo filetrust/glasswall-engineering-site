@@ -26,9 +26,9 @@ A known good file for executing the request can be downloaded  <a href="/example
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<h3>Sample Code</h3>
+<h3>Imports</h3>
 
-<p>The following code samples show the flow of getting a file rebuilt via the Rebuild API</p>
+<p>The following imports are required use the code snippets</p>
 
 <Tabs
   defaultValue="nodejs"
@@ -43,7 +43,47 @@ import TabItem from '@theme/TabItem';
 ```javascript
 const request = require("request");
 const fs = require("fs");
+```
 
+</TabItem>
+<TabItem value="py">
+
+```python
+import json
+import os
+import requests
+```
+
+</TabItem>
+<TabItem value="c#">
+
+```csharp
+using System;
+using System.Globalization;
+using System.IO;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
+```
+
+</TabItem>
+</Tabs>
+
+<h3>Forming the request</h3>
+
+<p>The following snippet is an example of how you can build a request to the file rebuild endpoint</p>
+
+<Tabs
+  defaultValue="nodejs"
+  values={[
+    { label: 'NodeJs', value: 'nodejs', },
+    { label: 'Python', value: 'py', },
+    { label: 'C#', value: 'c#', },
+  ]
+}>
+<TabItem value="nodejs">
+
+```javascript
 const apiKey = "YOUR API KEY";
 const inputFilePath = "INPUT FILE PATH";
 const url = "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/rebuild/file";
@@ -66,86 +106,34 @@ const options = {
         }
     }
 }
-
-request(options, function (error, res) {
-  if (error) throw new Error(error);
-  let data = res.body // res is the response coming from the API
-  let buf = Buffer.from(data);
-  
-  console.log(buf.length);
-  const outputFilePath = "Rebuilt File Output Path"
-
-  // callback passed to request
-  request(options, function (error, res) {
-    if (error) throw new Error(error);
-    if (!(res.statusCode == 200 && res.body)) return;    
-
-    let data = res.body // res is the response coming from the API
-    let buf = Buffer.from(data);
-    let file = fs.createWriteStream(outputFilePath);
-
-    file.write(buf);
-    file.end();
-  });
-});
 ```
 
 </TabItem>
 <TabItem value="py">
 
 ```python
-# This Python snippet makes use of the requests library
-# Get it with pip: "pip install requests" or read the docs:
-# https://requests.readthedocs.io/en/master/user/install/
-
-import os
-import requests
-
-api_key = "YOUR_API_KEY"
+api_key = "YOUR API KEY"
+input_file = "INPUT FILE PATH"
 url = "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/rebuild/file"
-input_file_path = r"YOUR/INPUT/FILE.docx"
-output_file_path = r"YOUR/OUTPUT/FILE.docx"
-
-# Send a file to Glasswall's Rebuild API
-with open(input_file_path, "rb") as f:
-    response = requests.post(
-        url=url,
-        files=[("file", f)],
-        headers={
-            "x-api-key": api_key,
-            "accept": "application/octet-stream"
-        }
-    )
-
-if response.status_code == 200 and response.content:
-    # Glasswall has now sanitised and returned this file
-    # Create output directory if it does not already exist
-    os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
-    # Write the sanitised file to output_file_path
-    with open(output_file_path, "wb") as f:
-        f.write(response.content)
-    print("Successfully wrote file to:", os.path.abspath(output_file_path))
-else:
-    # An error occurred, raise it
-    response.raise_for_status()
+​
+​with open(input_file, "rb") as f:
+  response = requests.post(
+    url=url,
+    files=[("file", f)],
+    headers={
+      "x-api-key": api_key,
+      "accept": "application/octet-stream"
+    })
 ```
 
 </TabItem>
 <TabItem value="c#">
 
 ```csharp
-using System;
-using System.Globalization;
-using System.IO;
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
-
-const string apiKey = "<YOUR API KEY>";
-const string inputFilePath = "<INPUT FILE PATH>";
+const string apiKey = "YOUR API KEY";
+const string inputFilePath = "INPUT FILE PATH";
 const url = "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/rebuild/file";
 
-// Formatting the request
 var request = new HttpRequestMessage(HttpMethod.Post, url);
 request.Headers.Add("Accept", "application/octet-stream");
 request.Headers.Add("x-api-key", apiKey);
@@ -154,28 +142,131 @@ request.Content = new MultipartFormDataContent("Boundary----" + DateTime.Now.ToS
 {
     {new ByteArrayContent(File.ReadAllBytes(inputFilePath)), "file", "/" + inputFilePath}
 };
+```
 
+</TabItem>
+</Tabs>
+
+</div>
+
+<h3>Executing the request</h3>
+
+<p>This snippet shows how to execute the request you have built in the previous step.</p>
+
+<Tabs
+  defaultValue="nodejs"
+  values={[
+    { label: 'NodeJs', value: 'nodejs', },
+    { label: 'Python', value: 'py', },
+    { label: 'C#', value: 'c#', },
+  ]
+}>
+<TabItem value="nodejs">
+
+```javascript
+request(options, function (error, res) {
+  if (error) throw new Error(error);
+  let data = res.body // res is the response coming from the API
+  let buf = Buffer.from(data);
+  
+  console.log(buf.length);
+  // do something with the rebuilt file...
+});
+```
+
+</TabItem>
+<TabItem value="py">
+
+```python
+response = requests.post(
+  url=url,
+  files=[("file", f)],
+  headers={
+    "x-api-key": api_key,
+    "accept": "application/octet-stream"
+  });
+
+# do something with the rebuilt file
+```
+
+</TabItem>
+<TabItem value="c#">
+
+```csharp
 using (var client = new HttpClient())
 {
-    // Send a file to Glasswall's Rebuild API
     using (var message = await client.SendAsync(request, CancellationToken.None))
     {
         var rebuiltFile = await message.Content.ReadAsByteArrayAsync();
 
-        const outputFilePath = "<REBUILT FILE OUTPUT PATH>"
-
-        if (message.StatusCode == HttpStatusCode.OK && message.Content != null)
-        {
-            // Glasswall has now sanitised and returned this file
-            var rebuiltFile = await message.Content.ReadAsByteArrayAsync();
-
-            System.IO.File.WriteAllBytes(outputFilePath, rebuiltFile);
-        }
+        // do something with the rebuilt file
     }
 }
 ```
 
 </TabItem>
 </Tabs>
-</div>
+
+<h3>Processing the response</h3>
+
+<p>Processing the response can be simple. An initial use case could be to save the rebuilt file to disk. This is how to do that.</p>
+
+<Tabs
+  defaultValue="nodejs"
+  values={[
+    { label: 'NodeJs', value: 'nodejs', },
+    { label: 'Python', value: 'py', },
+    { label: 'C#', value: 'c#', },
+  ]
+}>
+<TabItem value="nodejs">
+
+```javascript
+const outputFilePath = "Rebuilt File Output Path"
+
+// callback passed to request
+request(options, function (error, res) {
+  if (error) throw new Error(error);
+  if (!(res.statusCode == 200 && res.body)) return;    
+
+  let data = res.body // res is the response coming from the API
+  let buf = Buffer.from(data);
+  let file = fs.createWriteStream(outputFilePath);
+
+  file.write(buf);
+  file.end();
+});
+
+```
+
+</TabItem>
+<TabItem value="py">
+
+```python
+const output_file_path = "Rebuilt File Output Path"
+
+if response.status_code == 200 and response.content:
+  os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
+  with open(output_file_path, "wb") as f:
+    f.write(response.content)
+```
+
+</TabItem>
+<TabItem value="c#">
+
+```csharp
+const outputFilePath = "Rebuilt File Output Path"
+
+// message is the result of SendAsync
+if (message.StatusCode == HttpStatusCode.OK && message.Content != null)
+{
+  var rebuiltFile = await message.Content.ReadAsByteArrayAsync();
+
+  System.IO.File.WriteAllBytes(outputFilePath, rebuiltFile);
+}
+```
+
+</TabItem>
+</Tabs>
+
 <p>In the next documents, there will be infomation surrounding how the API works, how to configure requests and alternative endpoints to use.</p>
