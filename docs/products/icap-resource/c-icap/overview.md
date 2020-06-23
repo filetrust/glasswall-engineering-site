@@ -1,7 +1,6 @@
 ---
 title: C-ICAP Project
 id: c-icap-project-overview
-sidebar_label: Overview
 ---
 
 ## C-ICAP Project Overview

@@ -1,7 +1,6 @@
 ---
 title: ICAP Overview
 id: icap-overview
-sidebar_label: Overview
 ---
 
 ## ICAP Introduction
@@ -14,17 +13,22 @@ The protocol is aimed at providing simple object-based content vectoring for HTT
 
 The following definitions are a sub-set of the terminlogy used in the RFC. They are provided here as a convienience to the reader.
 *client*: A program that establishes connections for the purpose of sending requests.
+
 *origin server*: The server on which a given resource resides or is to be created.
+
 *surrogate*: A gateway co-located with an origin server, or at a different point in the network, delegated the authority to operate on behalf of, and typically working in close co-operation with, one or more origin servers. 
+
 *ICAP Resource*: Similar to an HTTP resource, but the URI refers to an ICAP service that performs adaptations of HTTP messages.
+
 *ICAP Server*: Similar to an HTTP server, except that the application services ICAP requests.
+
 *ICAP Client*: A program that establishes connections to ICAP servers for the purpose of sending requests. An ICAP client is often, but not always, a surrogate acting on behalf of a user.
 
 ## Request Modification
 
 In a "request modification" the ICAP Client sends an HTTP Request to an ICAP Server. 
 
-![Basic Request Modification Sequence](img/icap/icap_reqmod_sequence.png)
+![Basic Request Modification Sequence](/img/icap/icap_reqmod_sequence.png)
 
 1. The request is sent from the client to the surrogate, for an object on the origin server.
 1. The ICAP Client in the surrogate sends a REQMOD messages the ICAP Server.
