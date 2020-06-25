@@ -42,7 +42,7 @@ namespace RebuildAPI.Example
         {
             using (var client = new HttpClient())
             {
-                var request = new HttpRequestMessage(HttpMethod.Post, "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/Rebuild/base64");
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/base64");
                 request.Headers.Add("x-api-key", apiKey);
 
                 var inputFile = File.ReadAllBytes(inputFilePath);
@@ -149,7 +149,7 @@ namespace RebuildAPI.Example
         {
             using (var client = new HttpClient())
             {
-                var request = new HttpRequestMessage(HttpMethod.Post, "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/Rebuild");
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild");
                 request.Headers.Add("x-api-key", apiKey);
 
                 var body = JsonConvert.SerializeObject(new
@@ -301,7 +301,7 @@ namespace RebuildAPI.Example
         {
             using (var client = new HttpClient())
             {
-                var request = new HttpRequestMessage(HttpMethod.Post, "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/Rebuild/file");
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file");
                 request.Headers.Add("Accept", "application/octet-stream");
                 request.Headers.Add("x-api-key", apiKey);
 				
