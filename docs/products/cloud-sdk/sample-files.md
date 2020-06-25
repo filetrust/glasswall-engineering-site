@@ -1,5 +1,5 @@
 ---
-title: Safe Demo Test Files
+title: Test Files
 id: sample-files
 sidebar_label: Sample Files
 ---
@@ -21,6 +21,15 @@ This file is a polyglot file (i.e., identifies itself as both a .jpg, and a .zip
 When the .pdf is opened with Chrome or Acrobat, a pop up appears. This is launched by JavaScript in the .pdf which runs in the background. Rebuild API removes the JavaScript so the pop up no longer appears, delivering a safely regenerated, rebuilt file.
   
 [Download PDF file](https://gw-demo-sample-files-eu1.s3-eu-west-1.amazonaws.com/Execute+Java+Script_JS_PDF.pdf)
+
+
+## Macro that opens the calculator app MS Word
+
+
+Opening the file automatically runs a Macro, launching the calculator app. If it does not run automatically, you may need to enable Macros in Word. Rebuild API removes the Macro, delivering a sanitised file. Upon opening the new file, the calculator app will no longer launch.
+
+[Download DOCM file](https://gw-demo-sample-files-eu1.s3-eu-west-1.amazonaws.com/MacroRunCalculator.docm)
+​
 ​
 ## Macro that opens the calculator app MS Excel
 ​
