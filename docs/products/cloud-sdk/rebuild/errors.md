@@ -18,6 +18,9 @@ Something is wrong with the request being sent, the response body should indicat
 ### 403 Forbidden
 No / invalid X-API-key has been provided in the request. All the resources in the RebuildAPI require your X-API-Key in the header of the request. If you do not have an X-API-Key then visit our [store](https://glasswall-store.com/) to obtain one.
 
+### 403 Missing Authentication Token
+This error can be returned when the URL being used is incorrect. Please make sure that the url and case matches exactly for the API.
+
 ### 413 Payload Too Large
 The file you are sending via HTTP request body is over 6MB. Due to the limitations of AWS Lambda, 6MB is the largest payload a Lambda function can receive. If your files are above this size then it is suggested that the alternate method of processing files through secured URL's is used.
 
