@@ -18,7 +18,7 @@ import requests
 ​
 ​
 api_key = "YOUR_API_KEY"
-url = "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/rebuild/base64"
+url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/base64"
 ​
 """ rebuild a single file using the base64 endpoint.
 allow (0) review comments in microsoft word files """
@@ -70,7 +70,7 @@ import os
 import requests
 ​
 api_key = "YOUR_API_KEY"
-url = "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/rebuild/file"
+url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file"
 ​
 """ rebuild all files in the "data" directory, writing to a new "data_gwsanitised" directory with the same folder structure.
 disallow (2) excel files that contain macros and don't write them to the new directory.

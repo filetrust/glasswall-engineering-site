@@ -32,7 +32,7 @@ const writeDecodedBase64File = (filePath, baseBase64String) => {
 
 const options = {
     "method": "POST",
-    "url": "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/Rebuild/base64",
+    "url": "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/base64",
     "headers": {
         "x-api-key": api_key,
         "Content-Type": "application/json"
@@ -107,7 +107,7 @@ const outputPutUrl = "The output URL the rebuilt file will be uploaded to using 
 
 const options = {
     "method": "POST",
-    "url": "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/Rebuild",
+    "url": "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild",
     "headers": {
         "x-api-key": api_key,
         "Content-Type": "application/json"
@@ -187,7 +187,7 @@ const outputFilePath = "Path of the file that will be written containing the reb
 const options = {
     "encoding": null,
     "method": "POST",
-    "url": "https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/Rebuild/file",
+    "url": "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file",
     "headers": {
         "x-api-key": api_key,
         'Accept': 'application/octet-stream'

@@ -21,7 +21,7 @@ sidebar_label: API
             </div>
 
 ```javascript
-   POST /api/Rebuild/file
+   POST /api/rebuild/file
 ```
 
 </div>
@@ -94,7 +94,7 @@ Some data found inside the doc.
             </div>
 
 ```javascript
-   POST /api/Rebuild/base64
+   POST /api/rebuild/base64
 ```
 
 </div>
@@ -161,7 +161,7 @@ Some data found inside the doc.
             </div>
 
 ```javascript
-   POST /api/Rebuild
+   POST /api/rebuild
 ```
 
 </div>
