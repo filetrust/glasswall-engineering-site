@@ -49,7 +49,6 @@ const fs = require("fs");
 <TabItem value="py">
 
 ```python
-import json
 import os
 import requests
 ```
@@ -61,6 +60,7 @@ import requests
 using System;
 using System.Globalization;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -69,9 +69,9 @@ using System.Threading.Tasks;
 </TabItem>
 </Tabs>
 
-<h3>Forming the request</h3>
+<h3>Performing the request</h3>
 
-<p>The following snippet is an example of how you can build a request to the file rebuild endpoint</p>
+<p>The following snippet is an example of how you can build and execute the request to the file rebuild endpoint</p>
 
 <Tabs
   defaultValue="nodejs"
@@ -84,9 +84,10 @@ using System.Threading.Tasks;
 <TabItem value="nodejs">
 
 ```javascript
-const apiKey = "YOUR API KEY";
-const inputFilePath = "INPUT FILE PATH";
+const apiKey = "YOUR_API_KEY";
 const url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file";
+const inputFilePath = "YOUR/INPUT/FILE.docx";
+const outputFilePath = "YOUR/INPUT/FILE.docx"
 
 const options = {
     "encoding": null,
@@ -106,71 +107,14 @@ const options = {
         }
     }
 }
-```
 
-</TabItem>
-<TabItem value="py">
-
-```python
-api_key = "YOUR API KEY"
-input_file = "INPUT FILE PATH"
-url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file"
-​
-​with open(input_file, "rb") as f:
-  response = requests.post(
-    url=url,
-    files=[("file", f)],
-    headers={
-      "x-api-key": api_key,
-      "accept": "application/octet-stream"
-    })
-```
-
-</TabItem>
-<TabItem value="c#">
-
-```csharp
-const string apiKey = "YOUR API KEY";
-const string inputFilePath = "INPUT FILE PATH";
-const url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file";
-
-var request = new HttpRequestMessage(HttpMethod.Post, url);
-request.Headers.Add("Accept", "application/octet-stream");
-request.Headers.Add("x-api-key", apiKey);
-
-request.Content = new MultipartFormDataContent("Boundary----" + DateTime.Now.ToString(CultureInfo.InvariantCulture))
-{
-    {new ByteArrayContent(File.ReadAllBytes(inputFilePath)), "file", "/" + inputFilePath}
-};
-```
-
-</TabItem>
-</Tabs>
-
-</div>
-
-<h3>Executing the request</h3>
-
-<p>This snippet shows how to execute the request you have built in the previous step.</p>
-
-<Tabs
-  defaultValue="nodejs"
-  values={[
-    { label: 'NodeJs', value: 'nodejs', },
-    { label: 'Python', value: 'py', },
-    { label: 'C#', value: 'c#', },
-  ]
-}>
-<TabItem value="nodejs">
-
-```javascript
+// callback passed to request
 request(options, function (error, res) {
   if (error) throw new Error(error);
+  if (!(res.statusCode == 200 && res.body)) return;    
+
   let data = res.body // res is the response coming from the API
   let buf = Buffer.from(data);
-  
-  console.log(buf.length);
-  // do something with the rebuilt file...
 });
 ```
 
@@ -178,30 +122,53 @@ request(options, function (error, res) {
 <TabItem value="py">
 
 ```python
-response = requests.post(
-  url=url,
-  files=[("file", f)],
-  headers={
-    "x-api-key": api_key,
-    "accept": "application/octet-stream"
-  });
+api_key = "YOUR_API_KEY"
+url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file"
+input_file_path = r"YOUR/INPUT/FILE.docx"
+output_file_path = r"YOUR/OUTPUT/FILE.docx"
 
-# do something with the rebuilt file
+# Send a file to Glasswall's Rebuild API
+with open(input_file_path, "rb") as f:
+    response = requests.post(
+        url=url,
+        files=[("file", f)],
+        headers={
+            "x-api-key": api_key,
+            "accept": "application/octet-stream"
+        }
+    )
 ```
 
 </TabItem>
 <TabItem value="c#">
 
 ```csharp
-using (var client = new HttpClient())
-{
-    using (var message = await client.SendAsync(request, CancellationToken.None))
-    {
-        var rebuiltFile = await message.Content.ReadAsByteArrayAsync();
+    const string apiKey = "YOUR_API_KEY";
+    const string url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file";
+    const string inputFilePath = @"YOUR/INPUT/FILE.docx";
+    const string outputFilePath = @"YOUR/OUTPUT/FILE.docx";
 
-        // do something with the rebuilt file
+    var request = new HttpRequestMessage(HttpMethod.Post, url);
+    request.Headers.Add("Accept", "application/octet-stream");
+    request.Headers.Add("x-api-key", apiKey);
+
+    request.Content = new MultipartFormDataContent("Boundary----" + DateTime.Now.ToString(CultureInfo.InvariantCulture))
+    {
+        {new ByteArrayContent(File.ReadAllBytes(inputFilePath)), "file", "/" + inputFilePath}
+    };
+
+    using (var client = new HttpClient())
+    {
+        using (var message = await client.SendAsync(request, CancellationToken.None))
+        {
+            if (message.StatusCode == HttpStatusCode.OK && message.Content != null)
+            {
+                var rebuiltFile = await message.Content.ReadAsByteArrayAsync();
+                
+                // Do something with the rebuilt file
+            }
+        }
     }
-}
 ```
 
 </TabItem>
@@ -222,7 +189,96 @@ using (var client = new HttpClient())
 <TabItem value="nodejs">
 
 ```javascript
-const outputFilePath = "Rebuilt File Output Path"
+// callback passed to request
+request(options, function (error, res) {
+  if (error) throw new Error(error);
+  if (!(res.statusCode == 200 && res.body)) return;    
+
+  let data = res.body // res is the response coming from the API
+  let buf = Buffer.from(data);
+  let file = fs.createWriteStream(outputFilePath);
+
+  file.write(buf);
+  file.end();
+});
+
+```
+
+</TabItem>
+<TabItem value="py">
+
+```python
+if response.status_code == 200 and response.content:
+    # Glasswall has now sanitised and returned this file
+    # Create output directory if it does not already exist
+    os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
+    # Write the sanitised file to output_file_path
+    with open(output_file_path, "wb") as f:
+        f.write(response.content)
+    print("Successfully wrote file to:", os.path.abspath(output_file_path))
+else:
+    # An error occurred, raise it
+    response.raise_for_status()
+```
+
+</TabItem>
+<TabItem value="c#">
+
+```csharp
+if (message.StatusCode == HttpStatusCode.OK && message.Content != null)
+{
+  var rebuiltFile = await message.Content.ReadAsByteArrayAsync();
+
+  System.IO.File.WriteAllBytes(outputFilePath, rebuiltFile);
+}
+```
+
+</TabItem>
+</Tabs>
+
+<h3>Full Example</h3>
+
+<Tabs
+  defaultValue="nodejs"
+  values={[
+    { label: 'NodeJs', value: 'nodejs', },
+    { label: 'Python', value: 'py', },
+    { label: 'C#', value: 'c#', },
+  ]
+}>
+<TabItem value="nodejs">
+
+```javascript
+// This Javascript snippet makes use of the request library
+// Get it with npm: "npm install request" or read the docs:
+// https://www.npmjs.com/package/request
+
+const request = require("request");
+const fs = require("fs");
+
+const apiKey = "YOUR_API_KEY";
+const url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file";
+const inputFilePath = "YOUR/INPUT/FILE.docx";
+const outputFilePath = "YOUR/INPUT/FILE.docx"
+
+const options = {
+    "encoding": null,
+    "method": "POST",
+    "url": url,
+    "headers": {
+        "x-api-key": apiKey,
+        'Accept': 'application/octet-stream'
+    },
+    formData: {
+        "file": {
+            "value": fs.createReadStream(inputFilePath),
+            "options": {
+                "filename": "/" + inputFilePath,
+                "contentType": null
+            }
+        }
+    }
+}
 
 // callback passed to request
 request(options, function (error, res) {
@@ -243,30 +299,98 @@ request(options, function (error, res) {
 <TabItem value="py">
 
 ```python
-const output_file_path = "Rebuilt File Output Path"
+# This Python snippet makes use of the requests library
+# Get it with pip: "pip install requests" or read the docs:
+# https://requests.readthedocs.io/en/master/user/install/
+
+import os
+import requests
+
+api_key = "YOUR_API_KEY"
+url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file"
+input_file_path = r"YOUR/INPUT/FILE.docx"
+output_file_path = r"YOUR/OUTPUT/FILE.docx"
+
+# Send a file to Glasswall's Rebuild API
+with open(input_file_path, "rb") as f:
+    response = requests.post(
+        url=url,
+        files=[("file", f)],
+        headers={
+            "x-api-key": api_key,
+            "accept": "application/octet-stream"
+        }
+    )
 
 if response.status_code == 200 and response.content:
-  os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
-  with open(output_file_path, "wb") as f:
-    f.write(response.content)
+    # Glasswall has now sanitised and returned this file
+    # Create output directory if it does not already exist
+    os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
+    # Write the sanitised file to output_file_path
+    with open(output_file_path, "wb") as f:
+        f.write(response.content)
+    print("Successfully wrote file to:", os.path.abspath(output_file_path))
+else:
+    # An error occurred, raise it
+    response.raise_for_status()
 ```
 
 </TabItem>
 <TabItem value="c#">
 
 ```csharp
-const outputFilePath = "Rebuilt File Output Path"
+using System;
+using System.Globalization;
+using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
 
-// message is the result of SendAsync
-if (message.StatusCode == HttpStatusCode.OK && message.Content != null)
+namespace RebuildFile
 {
-  var rebuiltFile = await message.Content.ReadAsByteArrayAsync();
+    class Program
+    {
+        public static void Main()
+        {
+            MainAsync().GetAwaiter().GetResult();
+        }
 
-  System.IO.File.WriteAllBytes(outputFilePath, rebuiltFile);
+        static async Task MainAsync()
+        {
+            const string apiKey = "YOUR_API_KEY";
+            const string url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file";
+            const string inputFilePath = @"YOUR/INPUT/FILE.docx";
+            const string outputFilePath = @"YOUR/OUTPUT/FILE.docx";
+
+            var request = new HttpRequestMessage(HttpMethod.Post, url);
+            request.Headers.Add("Accept", "application/octet-stream");
+            request.Headers.Add("x-api-key", apiKey);
+
+            request.Content = new MultipartFormDataContent("Boundary----" + DateTime.Now.ToString(CultureInfo.InvariantCulture))
+            {
+                {new ByteArrayContent(File.ReadAllBytes(inputFilePath)), "file", "/" + inputFilePath}
+            };
+
+            using (var client = new HttpClient())
+            {
+                using (var message = await client.SendAsync(request, CancellationToken.None))
+                {
+                    if (message.StatusCode == HttpStatusCode.OK && message.Content != null)
+                    {
+                        var rebuiltFile = await message.Content.ReadAsByteArrayAsync();
+                        File.WriteAllBytes(outputFilePath, rebuiltFile);
+                    }
+                }
+            }
+        }
+    }
 }
 ```
 
 </TabItem>
 </Tabs>
+
+</div>
 
 <p>In the next documents, there will be infomation surrounding how the API works, how to configure requests and alternative endpoints to use.</p>
