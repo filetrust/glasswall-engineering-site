@@ -19,224 +19,14 @@ A key is required to access the Glasswlal Rebuild API, one can be purchased [her
 
 <h2>Http Code - Rebuild File</h2>
 
-<p>In the following steps choose a language to get started with using the endpoints programmatically.</p>
+<p>In the following examples choose a language to get started with using the endpoints programmatically.</p>
 
 A known good file for executing the request can be downloaded  <a href="/examples/Rebuild_Example_Image_That_Rebuilds.bmp" download>here</a>
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<h3>Imports</h3>
-
-<p>The following imports are required use the code snippets</p>
-
-<Tabs
-  defaultValue="nodejs"
-  values={[
-    { label: 'NodeJs', value: 'nodejs', },
-    { label: 'Python', value: 'py', },
-    { label: 'C#', value: 'c#', },
-  ]
-}>
-<TabItem value="nodejs">
-
-```javascript
-const request = require("request");
-const fs = require("fs");
-```
-
-</TabItem>
-<TabItem value="py">
-
-```python
-import os
-import requests
-```
-
-</TabItem>
-<TabItem value="c#">
-
-```csharp
-using System;
-using System.Globalization;
-using System.IO;
-using System.Net;
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
-```
-
-</TabItem>
-</Tabs>
-
-<h3>Performing the request</h3>
-
-<p>The following snippet is an example of how you can build and execute the request to the file rebuild endpoint</p>
-
-<Tabs
-  defaultValue="nodejs"
-  values={[
-    { label: 'NodeJs', value: 'nodejs', },
-    { label: 'Python', value: 'py', },
-    { label: 'C#', value: 'c#', },
-  ]
-}>
-<TabItem value="nodejs">
-
-```javascript
-const apiKey = "YOUR_API_KEY";
-const url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file";
-const inputFilePath = "YOUR/INPUT/FILE.docx";
-const outputFilePath = "YOUR/INPUT/FILE.docx"
-
-const options = {
-    "encoding": null,
-    "method": "POST",
-    "url": url,
-    "headers": {
-        "x-api-key": apiKey,
-        'Accept': 'application/octet-stream'
-    },
-    formData: {
-        "file": {
-            "value": fs.createReadStream(inputFilePath),
-            "options": {
-                "filename": "/" + inputFilePath,
-                "contentType": null
-            }
-        }
-    }
-}
-
-// callback passed to request
-request(options, function (error, res) {
-  if (error) throw new Error(error);
-  if (!(res.statusCode == 200 && res.body)) return;    
-
-  let data = res.body // res is the response coming from the API
-  let buf = Buffer.from(data);
-});
-```
-
-</TabItem>
-<TabItem value="py">
-
-```python
-api_key = "YOUR_API_KEY"
-url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file"
-input_file_path = r"YOUR/INPUT/FILE.docx"
-output_file_path = r"YOUR/OUTPUT/FILE.docx"
-
-# Send a file to Glasswall's Rebuild API
-with open(input_file_path, "rb") as f:
-    response = requests.post(
-        url=url,
-        files=[("file", f)],
-        headers={
-            "x-api-key": api_key,
-            "accept": "application/octet-stream"
-        }
-    )
-```
-
-</TabItem>
-<TabItem value="c#">
-
-```csharp
-    const string apiKey = "YOUR_API_KEY";
-    const string url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file";
-    const string inputFilePath = @"YOUR/INPUT/FILE.docx";
-    const string outputFilePath = @"YOUR/OUTPUT/FILE.docx";
-
-    var request = new HttpRequestMessage(HttpMethod.Post, url);
-    request.Headers.Add("Accept", "application/octet-stream");
-    request.Headers.Add("x-api-key", apiKey);
-
-    request.Content = new MultipartFormDataContent("Boundary----" + DateTime.Now.ToString(CultureInfo.InvariantCulture))
-    {
-        {new ByteArrayContent(File.ReadAllBytes(inputFilePath)), "file", "/" + inputFilePath}
-    };
-
-    using (var client = new HttpClient())
-    {
-        using (var message = await client.SendAsync(request, CancellationToken.None))
-        {
-            if (message.StatusCode == HttpStatusCode.OK && message.Content != null)
-            {
-                var rebuiltFile = await message.Content.ReadAsByteArrayAsync();
-                
-                // Do something with the rebuilt file
-            }
-        }
-    }
-```
-
-</TabItem>
-</Tabs>
-
-<h3>Processing the response</h3>
-
-<p>Processing the response can be simple. An initial use case could be to save the rebuilt file to disk. This is how to do that.</p>
-
-<Tabs
-  defaultValue="nodejs"
-  values={[
-    { label: 'NodeJs', value: 'nodejs', },
-    { label: 'Python', value: 'py', },
-    { label: 'C#', value: 'c#', },
-  ]
-}>
-<TabItem value="nodejs">
-
-```javascript
-// callback passed to request
-request(options, function (error, res) {
-  if (error) throw new Error(error);
-  if (!(res.statusCode == 200 && res.body)) return;    
-
-  let data = res.body // res is the response coming from the API
-  let buf = Buffer.from(data);
-  let file = fs.createWriteStream(outputFilePath);
-
-  file.write(buf);
-  file.end();
-});
-
-```
-
-</TabItem>
-<TabItem value="py">
-
-```python
-if response.status_code == 200 and response.content:
-    # Glasswall has now sanitised and returned this file
-    # Create output directory if it does not already exist
-    os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
-    # Write the sanitised file to output_file_path
-    with open(output_file_path, "wb") as f:
-        f.write(response.content)
-    print("Successfully wrote file to:", os.path.abspath(output_file_path))
-else:
-    # An error occurred, raise it
-    response.raise_for_status()
-```
-
-</TabItem>
-<TabItem value="c#">
-
-```csharp
-if (message.StatusCode == HttpStatusCode.OK && message.Content != null)
-{
-  var rebuiltFile = await message.Content.ReadAsByteArrayAsync();
-
-  System.IO.File.WriteAllBytes(outputFilePath, rebuiltFile);
-}
-```
-
-</TabItem>
-</Tabs>
-
-<h3>Full Example</h3>
+<h3>Code Examples</h3>
 
 <Tabs
   defaultValue="nodejs"
@@ -280,15 +70,18 @@ const options = {
     }
 }
 
-// callback passed to request
+// Send a file to Glasswall's Rebuild API
+// callback passed to request library
 request(options, function (error, res) {
   if (error) throw new Error(error);
   if (!(res.statusCode == 200 && res.body)) return;    
 
-  let data = res.body // res is the response coming from the API
+  // Glasswall has now sanitised and returned this file
+  let data = res.body
   let buf = Buffer.from(data);
-  let file = fs.createWriteStream(outputFilePath);
 
+  // Write the sanitised file to the output file path
+  let file = fs.createWriteStream(outputFilePath);
   file.write(buf);
   file.end();
 });
@@ -326,7 +119,7 @@ if response.status_code == 200 and response.content:
     # Glasswall has now sanitised and returned this file
     # Create output directory if it does not already exist
     os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
-    # Write the sanitised file to output_file_path
+    # Write the sanitised file to output file path
     with open(output_file_path, "wb") as f:
         f.write(response.content)
     print("Successfully wrote file to:", os.path.abspath(output_file_path))
@@ -374,11 +167,15 @@ namespace RebuildFile
 
             using (var client = new HttpClient())
             {
+                // Send a file to Glasswall's Rebuild API
                 using (var message = await client.SendAsync(request, CancellationToken.None))
                 {
                     if (message.StatusCode == HttpStatusCode.OK && message.Content != null)
                     {
+                        // Glasswall has now sanitised and returned this file
                         var rebuiltFile = await message.Content.ReadAsByteArrayAsync();
+
+                        // Write the sanitised file to output file path
                         File.WriteAllBytes(outputFilePath, rebuiltFile);
                     }
                 }
@@ -387,10 +184,9 @@ namespace RebuildFile
     }
 }
 ```
-
 </TabItem>
 </Tabs>
 
 </div>
 
-<p>In the next documents, there will be infomation surrounding how the API works, how to configure requests and alternative endpoints to use.</p>
+<p>In the next documents, there will be information surrounding how the API works, how to configure requests and alternative endpoints to use.</p>
