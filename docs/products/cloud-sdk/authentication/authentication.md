@@ -4,10 +4,8 @@ id: authentication-base
 sidebar_label: Authentication
 ---
 
-The Rebuild API currently authenticates via the built in API Keys associated to the usage plans we have set in AWS API Gateway. 
+The Rebuild API currently authenticates via a Lambda Authorizer. 
 
-Every incoming request to the API must contain an API key. API Gateway reads the key and compares it against the keys in the usage plan. If there is a match, API Gateway throttles the requests according to the plan's request limit and quota. Otherwise, it throws an InvalidKeyParameter exception. As a result, the caller receives a 403 Forbidden response.
+Every incoming request to the API must contain a JWT token. API Gateway then verifies via the authorizer that it is a valid token.. If there is a match, API Gateway throttles the requests according to the plan's request limit and quota. Otherwise, it throws an InvalidKeyParameter exception. As a result, the caller receives a 401 Unauthorized response.
 
-The API key is passed in as the **X-API-Key** header of each request to the Rebuild API methods.
-
-Soon after launch this is scheme will be replaced by a Lambda Authoriser which will provide a bearer token authentication strategy.
+The JWT Token is passed in as the **Authorization** header of each request to the Rebuild API methods.

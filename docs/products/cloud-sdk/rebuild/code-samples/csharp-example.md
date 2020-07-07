@@ -25,13 +25,9 @@ namespace RebuildAPI.Example
 {
     public class Program
     {
-        private const string apiKey = "YOUR API KEY";
-
-        private const string inputFilePath =
-            "PATH TO FILE TO BE REBUILT";
-
-        private const string outputFilePath =
-            "PATH TO WRITE REBUILT FILE";
+        private const string jwtToken = "YOUR JWT TOKEN";
+        private const string inputFilePath = "PATH TO FILE TO BE REBUILT";
+        private const string outputFilePath = "PATH TO WRITE REBUILT FILE";
         
         public static void Main(string[] args)
         {
@@ -42,8 +38,8 @@ namespace RebuildAPI.Example
         {
             using (var client = new HttpClient())
             {
-                var request = new HttpRequestMessage(HttpMethod.Post, "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/base64");
-                request.Headers.Add("x-api-key", apiKey);
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://gzlhbtpvk2.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/base64");
+                request.Headers.Add("Authorization", jwtToken);
 
                 var inputFile = File.ReadAllBytes(inputFilePath);
                 var base64File = Convert.ToBase64String(inputFile);
@@ -132,14 +128,10 @@ namespace RebuildAPI.Example
 {
     public class Program
     {
-        private const string apiKey = "YOUR API KEY";
-
-        private const string inputGetUrl =
-            "A Url to the file you want to rebuild";
-
-        private const string ouputPutUrl =
-            "A url you want the rebuilt file to be written to using a HTTP PUT operation";
-        
+        private const string jwtToken = "YOUR JWT TOKEN";
+        private const string inputGetUrl = "A Url to the file you want to rebuild";
+        private const string ouputPutUrl = "A url you want the rebuilt file to be written to using a HTTP PUT operation";
+    
         public static void Main()
         {
             RebuildAsync().GetAwaiter().GetResult();
@@ -149,8 +141,8 @@ namespace RebuildAPI.Example
         {
             using (var client = new HttpClient())
             {
-                var request = new HttpRequestMessage(HttpMethod.Post, "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild");
-                request.Headers.Add("x-api-key", apiKey);
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://gzlhbtpvk2.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild");
+                request.Headers.Add("Authorization", jwtToken);
 
                 var body = JsonConvert.SerializeObject(new
                 {
@@ -241,13 +233,9 @@ namespace RebuildAPI.Example
 {
 	public class Program
     {
-        private const string apiKey = "YOUR API KEY";
-
-        private const string inputFilePath =
-            "PATH TO FILE TO BE REBUILT";
-
-        private const string outputFilePath =
-            "PATH TO WRITE REBUILT FILE";
+        private const string jwtToken = "YOUR JWT TOKEN";
+        private const string inputFilePath = "PATH TO FILE TO BE REBUILT";
+        private const string outputFilePath = "PATH TO WRITE REBUILT FILE";
 
         private const string contentManagementPolicy = @"{
 		""PdfContentManagement"": {
@@ -301,9 +289,9 @@ namespace RebuildAPI.Example
         {
             using (var client = new HttpClient())
             {
-                var request = new HttpRequestMessage(HttpMethod.Post, "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file");
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://gzlhbtpvk2.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file");
                 request.Headers.Add("Accept", "application/octet-stream");
-                request.Headers.Add("x-api-key", apiKey);
+                request.Headers.Add("Authorization", jwtToken);
 				
                 using (var content = new MultipartFormDataContent("Boundary----" + DateTime.Now.ToString(CultureInfo.InvariantCulture)))
                 {
