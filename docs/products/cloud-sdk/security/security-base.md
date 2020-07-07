@@ -29,7 +29,7 @@ We are currently planning to organise penetration and vulnerability testing for 
 
 Rebuild API utilises AWS Lambda functions, Lambda is responsible for keeping software in the runtime and execution environment up to date, releasing new runtimes for new languages and frameworks, and deprecating runtimes when the underlying software is no longer supported.
 
-The Lambda functions themselves are only able to be triggered via API Gateway which in itelf requires API Keys as part of a usage plan.
+The Lambda functions themselves are only able to be triggered via API Gateway which requires a JWT Token.
 
 Files are processed in isolation as part of the serverless architecture, in that multiple files are not simultaneously processed by the same function.
 

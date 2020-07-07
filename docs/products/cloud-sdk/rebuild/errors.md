@@ -16,7 +16,7 @@ The error codes we issue are detailed below:
 Something is wrong with the request being sent, the response body should indicate what is missing or malformed. If you are unsure of the correct request then our quickstarts and [swagger](https://filetrust.github.io/cloudsdk-aws-rebuild-api/#/) documentation should provide the answer.
 
 ### 403 Forbidden
-No / invalid X-API-key has been provided in the request. All the resources in the RebuildAPI require your X-API-Key in the header of the request. If you do not have an X-API-Key then visit our [store](https://glasswall-store.com/) to obtain one.
+No / invalid JWT Token has been provided in the request. All the resources in the RebuildAPI require your JWT Token in the header of the request. If you do not have an JWT Token then visit our [store](https://glasswall-store.com/) to obtain one.
 
 ### 403 Missing Authentication Token
 This error can be returned when the URL being used is incorrect. Please make sure that the url and case matches exactly for the API.
@@ -28,7 +28,7 @@ The file you are sending via HTTP request body is over 6MB. Due to the limitatio
 Some files we just cannot make better, sometimes it is because we don't currently support the file type that has been sent to us. Other times the files are so broken we just cannot put them back together safely. If this happens then you will get this 422 response, the response body will indicate whether it was an unsupported (unknown) file type or the file simply had issues we couldn't resolve.
 
 ### 429 Too Many Requests
-This is primarily for the shared platform where each API Key is rate limited for fair usage, if you are getting this error it is an indication that you may need to move to the dedicated cloud where you can have a higher concurrency limit.
+This is primarily for the shared platform where the API is rate limited for fair usage, if you are getting this error it is an indication that you may need to move to the dedicated cloud where you can have a higher concurrency limit.
 
 ### 500 Internal Server Error
 This error should rarely happen, if it does, that's our bad. Report it to us by raising an issue on our [GitHub](https://github.com/filetrust) pages and we will endevour to fix the issue.
