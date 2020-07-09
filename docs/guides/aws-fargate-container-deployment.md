@@ -94,7 +94,7 @@ Once the `push` is complete the image is available in the ECR
 # Deploy to Fargate
 ## Create an ECS Cluster
 
-To create a cluster, the only requirement is a uniquue name.
+To create a cluster, the only requirement is a unique name.
 ```
 aws ecs create-cluster --cluster-name icap-pilot-cluster
 ```
