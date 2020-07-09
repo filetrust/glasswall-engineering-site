@@ -7,7 +7,10 @@ keywords:
   - AWS
   - Fargate
   - ECR
+  - ECS
   - ICAP
+  - Docker
+  - DevOps
   
 description: How to deploy a docker container into AWS Fargate
 ---
