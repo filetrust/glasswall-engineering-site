@@ -47,6 +47,9 @@ module.exports = {
 					"CI/CD": [
 						"guides/ci-cd-pipeline"
 					],
+                    "ICAP": [
+                        "guides/aws-fargate-container-deployment"
+                    ],
 					/* "Rebuild" :[
 						"guides/file-rebuild-api-using-aws-sam",	
 						"guides/file-rebuild-cloud-using-postman",				
