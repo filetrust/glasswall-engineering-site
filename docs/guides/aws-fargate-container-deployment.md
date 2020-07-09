@@ -60,10 +60,10 @@ On successful creation of the registry the details are reported in JSON format.
 ```
 {
     "repository": {
-        "repositoryArn": "arn:aws:ecr:eu-west-1:370377960141:repository/icap-pilot",
-        "registryId": "370377960141",
+        "repositoryArn": "arn:aws:ecr:eu-west-1:123456789123:repository/icap-pilot",
+        "registryId": "123456789123",
         "repositoryName": "icap-pilot",
-        "repositoryUri": "370377960141.dkr.ecr.eu-west-1.amazonaws.com/icap-pilot",
+        "repositoryUri": "123456789123.dkr.ecr.eu-west-1.amazonaws.com/icap-pilot",
         "createdAt": "2020-07-08T11:39:59+01:00",
         "imageTagMutability": "MUTABLE",
         "imageScanningConfiguration": {
@@ -77,17 +77,17 @@ On successful creation of the registry the details are reported in JSON format.
 
 Using the `repositoryUri` in the JSON details, tag the local image
 ```
-docker tag gw-icap:latest  370377960141.dkr.ecr.eu-west-1.amazonaws.com/icap-pilot:latest
+docker tag gw-icap:latest  123456789123.dkr.ecr.eu-west-1.amazonaws.com/icap-pilot:latest
 ```
 
 Authenticate Docker to the ECR registry with `get-login-password`. When passing the authentication toke to the `docker login` command, use the value `AWS` for the username and specify the ECR URI.
 ```
-aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 370377960141.dkr.ecr.eu-west-1.amazonaws.com/icap-pilot
+aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 123456789123.dkr.ecr.eu-west-1.amazonaws.com/icap-pilot
 ```
 
 Now push the local image to the ECR repository
 ```
-docker push 370377960141.dkr.ecr.eu-west-1.amazonaws.com/icap-pilot:latest
+docker push 123456789123.dkr.ecr.eu-west-1.amazonaws.com/icap-pilot:latest
 ```
 Once the `push` is complete the image is available in the ECR
 
@@ -125,11 +125,11 @@ Create a file called `icap-pilot-task.json` and populate it with the following c
 {
     "family": "icap-pilot", 
     "networkMode": "awsvpc", 
-    "executionRoleArn": "arn:aws:iam::370377960141:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::123456789123:role/ecsTaskExecutionRole",
     "containerDefinitions": [
         {
             "name": "icap-pilot", 
-            "image": "370377960141.dkr.ecr.eu-west-1.amazonaws.com/icap-pilot:latest", 
+            "image": "123456789123.dkr.ecr.eu-west-1.amazonaws.com/icap-pilot:latest", 
             "portMappings": [
                 {
                     "containerPort": 1344, 
@@ -179,7 +179,7 @@ The Default VPC can be used. The subnets should be within it. If one does not al
                     "UserIdGroupPairs": []
                 }
             ],
-            "OwnerId": "370377960141",
+            "OwnerId": "123456789123",
             "GroupId": "sg-0f07a8bc71b2cc92c",
             "IpPermissionsEgress": [
                 {
@@ -216,9 +216,9 @@ The command output provides a JSON description of the new service.
 ```
 {
     "service": {
-        "serviceArn": "arn:aws:ecs:eu-west-1:370377960141:service/icap-pilot-service",
+        "serviceArn": "arn:aws:ecs:eu-west-1:123456789123:service/icap-pilot-service",
         "serviceName": "icap-pilot-service",
-        "clusterArn": "arn:aws:ecs:eu-west-1:370377960141:cluster/icap-pilot-cluster",
+        "clusterArn": "arn:aws:ecs:eu-west-1:123456789123:cluster/icap-pilot-cluster",
         "loadBalancers": [],
         "serviceRegistries": [],
         "status": "ACTIVE",
@@ -227,7 +227,7 @@ The command output provides a JSON description of the new service.
         "pendingCount": 0,
         "launchType": "FARGATE",
         "platformVersion": "LATEST",
-        "taskDefinition": "arn:aws:ecs:eu-west-1:370377960141:task-definition/icap-pilot:2",
+        "taskDefinition": "arn:aws:ecs:eu-west-1:123456789123:task-definition/icap-pilot:2",
         "deploymentConfiguration": {
             "maximumPercent": 200,
             "minimumHealthyPercent": 100
@@ -235,7 +235,7 @@ The command output provides a JSON description of the new service.
             {
                 "id": "ecs-svc/1424237771430292179",
                 "status": "PRIMARY",
-                "taskDefinition": "arn:aws:ecs:eu-west-1:370377960141:task-definition/icap-pilot:2",                "desiredCount": 1,
+                "taskDefinition": "arn:aws:ecs:eu-west-1:123456789123:task-definition/icap-pilot:2",                "desiredCount": 1,
                 "pendingCount": 0,
                 "runningCount": 0,
                 "createdAt": "2020-07-08T19:33:11.508000+01:00",
@@ -256,7 +256,7 @@ The command output provides a JSON description of the new service.
                 }
             }
         ],
-        "roleArn": "arn:aws:iam::370377960141:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+        "roleArn": "arn:aws:iam::123456789123:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
         "events": [],
         "createdAt": "2020-07-08T19:33:11.508000+01:00",
         "placementConstraints": [],
