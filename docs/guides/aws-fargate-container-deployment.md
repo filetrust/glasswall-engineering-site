@@ -285,3 +285,9 @@ The command output provides a JSON description of the new service.
 
 The service will now be available to handle traffic.
 
+# References
+[Tutorial: Creating a Cluster with a Fargate Task Using the AWS CLI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_AWSCLI_Fargate.html)
+[Environment variables to configure the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html?icmpid=docs_sso_user_portal)
+[Configuring the AWS CLI to use AWS Single Sign-On](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html)
+[Securing credentials using AWS Secrets Manager with AWS Fargate](https://aws.amazon.com/blogs/compute/securing-credentials-using-aws-secrets-manager-with-aws-fargate/)
+[Amazon ECR Registries : Registry Authentication](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html)
