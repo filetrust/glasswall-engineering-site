@@ -17,8 +17,8 @@ import base64
 import requests
 ​
 ​
-api_key = "YOUR_API_KEY"
-url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/base64"
+jwt_token = "YOUR_JWT_TOKEN"
+url = "https://gzlhbtpvk2.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/base64"
 ​
 """ rebuild a single file using the base64 endpoint.
 allow (0) review comments in microsoft word files """
@@ -40,7 +40,7 @@ response = requests.post(
         }
     },
     headers={
-        "x-api-key": api_key
+        "Authorization": jwt_token
     }
 )
 ​
@@ -69,8 +69,8 @@ import json
 import os
 import requests
 ​
-api_key = "YOUR_API_KEY"
-url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file"
+jwt_token = "YOUR_JWT_TOKEN"
+url = "https://gzlhbtpvk2.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file"
 ​
 """ rebuild all files in the "data" directory, writing to a new "data_gwsanitised" directory with the same folder structure.
 disallow (2) excel files that contain macros and don't write them to the new directory.
@@ -88,7 +88,7 @@ for root, dirs, files in os.walk(directory):
                 url=url,
                 files=[("file", f)],
                 headers={
-                    "x-api-key": api_key,
+                    "Authorization": jwt_token,
                     "accept": "application/octet-stream"
                 },
                 data={

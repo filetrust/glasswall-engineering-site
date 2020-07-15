@@ -11,12 +11,12 @@ In this example files are loaded from the OS and a request with the content type
 
 The rebuilt file is returned as Base64, decoded by the client and written to disk.
 
-```Javascript
+```javascript
 
 const request = require("request");
 const fs = require("fs");
 
-const api_key = "YOUR API KEY";
+const jwt_token = "YOUR JWT TOKEN";
 const inputFilePath = "Path to the file that needs rebuilding";
 const outputFilePath = "Path of the file that will be written containing the rebuilt file contents";
 
@@ -32,9 +32,9 @@ const writeDecodedBase64File = (filePath, baseBase64String) => {
 
 const options = {
     "method": "POST",
-    "url": "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/base64",
+    "url": "https://gzlhbtpvk2.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/base64",
     "headers": {
-        "x-api-key": api_key,
+        "Authorization": jwt_token,
         "Content-Type": "application/json"
     },
     body: JSON.stringify(
@@ -101,15 +101,15 @@ In this example a file is downloaded from an input URL with a GET operation and 
 const request = require("request");
 const fs = require("fs");
 
-const api_key = "YOUR API KEY";
+const jwt_token = "YOUR JWT TOKEN";
 const inputGetUrl = "The input URL to the file to be downloaded using HTTP GET. This is the file that will be rebuilt.";
 const outputPutUrl = "The output URL the rebuilt file will be uploaded to using HTTP PUT.";
 
 const options = {
     "method": "POST",
-    "url": "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild",
+    "url": "https://gzlhbtpvk2.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild",
     "headers": {
-        "x-api-key": api_key,
+        "Authorization": jwt_token,
         "Content-Type": "application/json"
     },
     body: JSON.stringify(
@@ -180,16 +180,16 @@ The rebuilt file contents are returned to the client and written to disk.
 const request = require("request");
 const fs = require("fs");
 
-const api_key = "YOUR API KEY";
+const jwt_token = "YOUR JWT TOKEN";
 const inputFilePath = "Path to the file that needs rebuilding";
 const outputFilePath = "Path of the file that will be written containing the rebuilt file contents";
 
 const options = {
     "encoding": null,
     "method": "POST",
-    "url": "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file",
+    "url": "https://gzlhbtpvk2.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file",
     "headers": {
-        "x-api-key": api_key,
+        "Authorization": jwt_token,
         'Accept': 'application/octet-stream'
     },
     formData: {

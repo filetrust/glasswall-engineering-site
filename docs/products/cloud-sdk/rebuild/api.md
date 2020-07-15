@@ -72,7 +72,7 @@ Some data found inside the doc.
         <p>This endpoint has the following headers that can be set. </p>
         <ul>
             <li>Accept - This can be set to 'application/octet-stream'. If not set, a base64 representation of the rebuilt file will be returned instead of the binary content of the rebuilt file.</li>
-            <li>x-api-key - This is the API key that you purchase. This must be sent in the request.</li>
+            <li>Authorization - This is the JWT Token that you purchased. This must be sent in the request.</li>
             <li>Content-Type - This should be set to 'multipart/form-data', most languages will provide mechanisms to automatically populate this.</li>
         </ul>
 </div>
@@ -139,7 +139,7 @@ Some data found inside the doc.
 <div class="api-details">
         <p>This endpoint has the following headers that can be set. </p>
         <ul>
-            <li>x-api-key - This is the API key that you purchase. This must be sent in the request.</li>
+            <li>Authorization - This is the JWT Token that you purchased. This must be sent in the request.</li>
             <li>Content-Type - This should be set to 'application/json', most languages will provide mechanisms to automatically populate this.</li>
         </ul>
 </div>
@@ -209,7 +209,7 @@ Some data found inside the doc.
 <div class="api-details">
         <p>This endpoint has the following headers that can be set. </p>
         <ul>
-            <li>x-api-key - This is the API key that you purchase. This must be sent in the request</li>
+            <li>Authorization - This is the JWT Token that you purchased. This must be sent in the request.</li>
             <li>Content-Type - This should be set to 'application/json', most languages will provide mechanisms to automatically populate this.</li>
         </ul>
 </div>
