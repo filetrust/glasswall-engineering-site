@@ -13,9 +13,9 @@ This page can be used as a guide to getting started using the Rebuild API. It de
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/dc8ba5f0a4ecfa29ad12)
 
 <div>
-<h2>Get Key</h2>
+<h2>Get Token</h2>
 
-A key is required to access the Glasswlal Rebuild API, one can be purchased [here](https://glasswall-store.com/products/glasswall-rebuild-cloud-in-shared-cloud-environment?variant=33476559274124)
+A token is required to access the Glasswlal Rebuild API, one can be purchased [here](https://glasswall-store.com/products/glasswall-rebuild-cloud-in-shared-cloud-environment?variant=33476559274124)
 
 <h2>Http Code - Rebuild File</h2>
 
@@ -46,8 +46,8 @@ import TabItem from '@theme/TabItem';
 const request = require("request");
 const fs = require("fs");
 
-const apiKey = "YOUR_API_KEY";
-const url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file";
+const jwtToken = "YOUR_JWT_TOKEN";
+const url = "https://gzlhbtpvk2.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file";
 const inputFilePath = "YOUR/INPUT/FILE.docx";
 const outputFilePath = "YOUR/INPUT/FILE.docx"
 
@@ -56,7 +56,7 @@ const options = {
     "method": "POST",
     "url": url,
     "headers": {
-        "x-api-key": apiKey,
+        "Authorization": jwtToken,
         'Accept': 'application/octet-stream'
     },
     formData: {
@@ -99,8 +99,8 @@ request(options, function (error, res) {
 import os
 import requests
 
-api_key = "YOUR_API_KEY"
-url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file"
+jwt_token = "YOUR_JWT_TOKEN"
+url = "https://gzlhbtpvk2.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file"
 input_file_path = r"YOUR/INPUT/FILE.docx"
 output_file_path = r"YOUR/OUTPUT/FILE.docx"
 
@@ -110,7 +110,7 @@ with open(input_file_path, "rb") as f:
         url=url,
         files=[("file", f)],
         headers={
-            "x-api-key": api_key,
+            "Authorization": jwt_token,
             "accept": "application/octet-stream"
         }
     )
@@ -151,14 +151,14 @@ namespace RebuildFile
 
         static async Task MainAsync()
         {
-            const string apiKey = "YOUR_API_KEY";
-            const string url = "https://lknt3bidbf.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file";
+            const string jwtToken = "YOUR_JWT_TOKEN";
+            const string url = "https://gzlhbtpvk2.execute-api.eu-west-1.amazonaws.com/Prod/api/rebuild/file";
             const string inputFilePath = @"YOUR/INPUT/FILE.docx";
             const string outputFilePath = @"YOUR/OUTPUT/FILE.docx";
 
             var request = new HttpRequestMessage(HttpMethod.Post, url);
             request.Headers.Add("Accept", "application/octet-stream");
-            request.Headers.Add("x-api-key", apiKey);
+            request.Headers.Add("Authorization", jwtToken);
 
             request.Content = new MultipartFormDataContent("Boundary----" + DateTime.Now.ToString(CultureInfo.InvariantCulture))
             {
