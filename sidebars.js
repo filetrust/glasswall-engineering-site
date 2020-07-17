@@ -78,6 +78,10 @@ module.exports = {
 						}
 					]
 				} */
-			]
+			],
+		"Careers":
+		[
+			"careers/rules-of-engagement"
+		]
 	},
 };
