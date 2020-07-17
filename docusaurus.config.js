@@ -26,6 +26,12 @@ module.exports = {
           position: "left",
         },
         {
+          to: "docs/careers/rules-of-engagement",
+          activeBasePath: "docs/careers",
+          label: "Careers",
+          position: "left"
+        },
+        {
           href: "https://github.com/filetrust",
           label: "GitHub",
           position: "right",
