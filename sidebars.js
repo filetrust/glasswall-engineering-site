@@ -81,7 +81,12 @@ module.exports = {
 			],
 		"Careers":
 		[
-			"careers/rules-of-engagement"
+			"careers/rules-of-engagement",
+			{
+				type: 'link',
+				label: "Work for Glasswall",
+				href: "http://careers.glasswallsolutions.com/"
+			}
 		]
 	},
 };
