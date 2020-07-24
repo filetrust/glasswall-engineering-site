@@ -10,9 +10,10 @@ Rules of Engagement
 
 Any prospective agency would need to:
 
-- Direct their candidates to our [Blog Post](https://medium.com/glasswall-engineering/were-hiring-calling-devops-sre-and-team-leads-407d02151abb)
+- Direct their candidates to one of our blog posts, we'll have different write ups for different types of roles. E.G: [Blog Post](https://medium.com/glasswall-engineering/were-hiring-calling-devops-sre-and-team-leads-407d02151abb)
 - Have them read the blog and complete all the challenges. The blog has guidelines on how to submit their application.
-- Request that your candidate CC&#39;s an agency representative when they email [careers@glasswallsolutions.com](mailto:careers@glasswallsolutions.com) with their submission.
+- Have your cadididate apply to our role via http://careers.glasswallsolutions.com/.
+- You or your candidate can email us at [careers@glasswallsolutions.com](mailto:careers@glasswallsolutions.com) to inform us of your relationship to connect the finders fee.
 
 What Glasswall will do:
 
