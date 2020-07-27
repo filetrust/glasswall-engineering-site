@@ -39,6 +39,31 @@ Reference Materials:
 - Glasswall Engineering Site: [https://engineering.glasswallsolutions.com/](https://engineering.glasswallsolutions.com/)
 - Glasswall SRE site: [https://sre.glasswallsolutions.com/](https://sre.glasswallsolutions.com/)
 - SRE Hiring Blog: [https://medium.com/glasswall-engineering/want-to-be-an-sre-join-glasswall-a4b10ab94220](https://medium.com/glasswall-engineering/want-to-be-an-sre-join-glasswall-a4b10ab94220)
-- Current Hiring blog with open positions:
+- Current Hiring blogs with open positions:
 
 [https://medium.com/glasswall-engineering/were-hiring-calling-devops-sre-and-team-leads-407d02151abb](https://medium.com/glasswall-engineering/were-hiring-calling-devops-sre-and-team-leads-407d02151abb)
+
+### FAQ:
+Question: 
+With regards to 'We offer flexible and remote working options.' - Would you consider someone who will work absolutely 100% remote or would they have to spend time in the Chelmsford office each week/month etc?  
+Answer: 
+Yes we will, as long as the work is getting done, location is not important. Our Chelmsford office will be remaining closed for the most part until 2021 in any case.  
+
+Question:
+Does the presentation have to be about Glasswall or about me, like the example presentations are? Also can I include the wardley map in the same presentation?  
+Answer:
+The presentations are about the person. It’s an opportunity for them to present themselves, who they are, what their passions are, how they think. etc.
+It's for us to learn about them the things we never could through a CV. Yes, they can include the map in the presentation 😊  
+
+Question:
+One of my contacts was interested in the SRE Team Lead position. However, he was put off by the 'on-call' element. Is that mandatory for the role or can it be worked around?  
+Answer:
+100% mandatory for any SRE position. We compensate our SRE staff with an addiotional £5K per annum on top of their base salary. They will then be on a rota with the rest of the SRE team to handle any out of hour incidents of our Production Cloud products. We use PagerDuty to handle these p1 incident call outs.   
+
+Question:
+Can you elaborate on your company benefits?  
+Answer:
+Some benefits include private health care, pension contribution, and our options programme. We provide 25 days annual leave. All staff have access to online training platforms.
+We have a quarterly training budget for study materials, conferences, certifications, productivity tools etc.  
+
+
