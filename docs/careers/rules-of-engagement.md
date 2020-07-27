@@ -41,7 +41,8 @@ Reference Materials:
 - SRE Hiring Blog: [https://medium.com/glasswall-engineering/want-to-be-an-sre-join-glasswall-a4b10ab94220](https://medium.com/glasswall-engineering/want-to-be-an-sre-join-glasswall-a4b10ab94220)
 - Current Hiring blogs with open positions:
 
-[https://medium.com/glasswall-engineering/were-hiring-calling-devops-sre-and-team-leads-407d02151abb](https://medium.com/glasswall-engineering/were-hiring-calling-devops-sre-and-team-leads-407d02151abb)
+[Medium blog post - Dev Team Lead, SRE Team Lead, DevOps Engineer](https://medium.com/glasswall-engineering/were-hiring-calling-devops-sre-and-team-leads-407d02151abb)  
+[Medium blog post - AppSec Engineer](https://medium.com/@absi81/were-hiring-calling-appsec-engineer-c1616a0639bd)
 
 ### FAQ:
 Question: 
