@@ -54,7 +54,7 @@ Question:
 Does the presentation have to be about Glasswall or about me, like the example presentations are? Also can I include the wardley map in the same presentation?  
 Answer:
 The presentations are about the person. It’s an opportunity for them to present themselves, who they are, what their passions are, how they think. etc.
-It's for us to learn about them the things we never could through a CV. Yes, they can include the map in the presentation 😊  
+It's for us to learn about them the things we never could through a CV. Yes, they can include the map in the presentation :)   
 
 Question:
 One of my contacts was interested in the SRE Team Lead position. However, he was put off by the 'on-call' element. Is that mandatory for the role or can it be worked around?  
