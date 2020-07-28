@@ -6,6 +6,7 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "filetrust", // Usually your GitHub org/user name.
   projectName: "glasswall-engineering-site", // Usually your repo name.
+  onBrokenLinks: 'log',
   themeConfig: {
     navbar: {
       title: "Glasswall Engineering",
