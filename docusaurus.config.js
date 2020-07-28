@@ -13,7 +13,7 @@ module.exports = {
         alt: "Glasswall Logo",
         src: "img/glasswall_logo_blue.png"        
       },
-      links: [
+      items: [
         {
           to: "docs/product-descriptions/product-overview",
           activeBasePath: "docs",
