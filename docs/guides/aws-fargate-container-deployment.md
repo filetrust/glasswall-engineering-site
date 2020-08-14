@@ -22,7 +22,7 @@ This guide will walk through the steps necessary to deploy a Docker Container us
 
 The example project being demonstrated is the [Glasswall ICAP Service](https://github.com/filetrust/c-icap). This service requires a single public port to be made available, 1344.
 
-Once the Glasswall ICAP Service Docker image has be built it is pushed to an [Amazon Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/). This is a fully managed Docker container registry service provided by AWS making it easy to store, manage and deploy container images.
+Once the Glasswall ICAP Service Docker image has been built it is pushed to an [Amazon Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/). This is a fully managed Docker container registry service provided by AWS making it easy to store, manage and deploy container images.
 
 Once the Docker container is available from the registry we can make use of the [Amazon Elastic Container Service (ECS)](https://aws.amazon.com/ecs/) to deploy the container using [AWS Fargate](https://aws.amazon.com/fargate/). AWS Fargate provides a serverless compute engine for containers. When setting up the ECS cluster we need a security group to be created that opens up port 1344, using [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam).
 
@@ -83,7 +83,7 @@ Using the `repositoryUri` in the JSON details, tag the local image
 docker tag gw-icap:latest  123456789123.dkr.ecr.eu-west-1.amazonaws.com/icap-pilot:latest
 ```
 
-Authenticate Docker to the ECR registry with `get-login-password`. When passing the authentication toke to the `docker login` command, use the value `AWS` for the username and specify the ECR URI.
+Authenticate Docker to the ECR registry with `get-login-password`. When passing the authentication token to the `docker login` command, use the value `AWS` for the username and specify the ECR URI.
 ```
 aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 123456789123.dkr.ecr.eu-west-1.amazonaws.com/icap-pilot
 ```
@@ -156,7 +156,7 @@ aws ecs register-task-definition --region eu-west-1 --cli-input-json file://icap
 ```
 
 ## Setup networking
-The service creation requires network configuration to be specified. The networkgin is defined within Amazon Virtual Private Cloud (VPC),  a virtual network dedicated to your AWS account..
+The service creation requires network configuration to be specified. The networking is defined within Amazon Virtual Private Cloud (VPC),  a virtual network dedicated to your AWS account. 
 
 The Default VPC can be used. The subnets should be within it. If one does not already exist, a new security group can be added that opens any necessary ports (for ICAP port 1344 is required). An example ICAP Security Group configuration is shown below.
 ```
