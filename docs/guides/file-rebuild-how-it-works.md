@@ -6,7 +6,7 @@ sidebar_label: Under the Hood
 
 ## Background
 
-The Rebuild API leverages serverless functions to provide the battle hardened capablities of the Rebuild SDK at scale, available as through HTTP API calls. With a range of consumption options available from pay-per-request to private cloud deployments, all the code is open sourced in [GitHub](https://github.com/filetrust). The first generation of code is focused on providing the capability using AWS components with Azure components surfacing shortly after first launch.
+The Rebuild API leverages serverless functions to provide the battle hardened capablities of the Rebuild SDK at scale, available through HTTP API calls. With a range of consumption options available from pay-per-request to private cloud deployments, all the code is open sourced in [GitHub](https://github.com/filetrust). The first generation of code is focused on providing the capability using AWS components with Azure components surfacing shortly after first launch.
 
 For our hosted solution we will assemble the components that give us the best levels of performance and resillience which could mean we are operating within multiple cloud providers. For managed and self deployed solutions then it really becomes a pick and choose for which is your cloud provider of choice, the aim here being that Glasswall's engineering team provide the components that fit all the major cloud providers that suit as many use cases as possible.
 
