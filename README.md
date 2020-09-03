@@ -2,7 +2,10 @@
 
 This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
-[![Build Status](https://dev.azure.com/glasswall/Glasswall%20Cloud/_apis/build/status/Glasswall.Engineering.Site/filetrust.glasswall-engineering-site?branchName=master)](https://dev.azure.com/glasswall/Glasswall%20Cloud/_build/latest?definitionId=468&branchName=master)
+![CI](https://github.com/filetrust/glasswall-engineering-site/workflows/CI/badge.svg)
+[![Build Status](https://glasswall.visualstudio.com/Glasswall%20Cloud/_apis/build/status/Glasswall.Engineering.Site/filetrust.glasswall-engineering-site?branchName=staging)](https://glasswall.visualstudio.com/Glasswall%20Cloud/_build/latest?definitionId=468&branchName=staging)
+![CD](https://github.com/filetrust/glasswall-engineering-site/workflows/CD/badge.svg)
+
 
 ### Yarn
 ```
