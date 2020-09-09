@@ -35,5 +35,29 @@ Files are processed in isolation as part of the serverless architecture, in that
 
 The process of rebuilding a file does not requre it to be written to storage or leave the Lambda function other than the rebuilt file being returned in the response or posted to an output destination URL (which should follow the principal of least priviledge). For this reason the security footprint of the Rebuild API is small and inherits the security of the platform it resides on - AWS.
 
+# Security Awerness Training For The Rebuild Squad
+
+Security awerness training was delivered to the Rebuild Squad in May 2020. The training was focused on Application Security, Threat Modelling and OWASP Top 10. 
+OWASP Top 10 2017 are the Top 10 Web Application Threats: 
+
+- Injection
+- Broken Authentication
+- Sensitive Data Exposure
+- XML External Entities (XXE)
+- Broken Access Control
+- Security Misconfiguration
+- Cross-Site Scripting XSS
+- Insecure Deserialization
+- Using Components with Known Vulnerabilities
+- Insufficient Logging & Monitoring
+
+Find out more about OWASP Top 10 [here](https://owasp.org/www-project-top-ten/).
+
+
+Application Security Scans
+Threat Modelling
+Penetration Testing
+
+
 
 
