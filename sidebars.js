@@ -81,6 +81,7 @@ module.exports = {
 			],
 		"Careers":
 		[
+			"careers/risk-compliance-officer",
 			"careers/rules-of-engagement",
 			{
 				type: 'link',
