@@ -68,7 +68,3 @@ Blog Post:
 - Glasswall File Drop Website - [https://file-drop.co.uk/](https://file-drop.co.uk/)
 - Glasswall InfoSec Site - [https://it-infosec.glasswallsolutions.com/](https://it-infosec.glasswallsolutions.com/)
 
-3
-
-Copyright Glasswall Solutions Limited 2019
-
