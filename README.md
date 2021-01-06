@@ -2,18 +2,27 @@
 
 This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
-[![Build Status](https://dev.azure.com/glasswall/Glasswall%20Cloud/_apis/build/status/Glasswall.Engineering.Site/filetrust.glasswall-engineering-site?branchName=master)](https://dev.azure.com/glasswall/Glasswall%20Cloud/_build/latest?definitionId=468&branchName=master)
+![CI](https://github.com/filetrust/glasswall-engineering-site/workflows/CI/badge.svg)
+[![Build Status](https://glasswall.visualstudio.com/Glasswall%20Cloud/_apis/build/status/Glasswall.Engineering.Site/filetrust.glasswall-engineering-site?branchName=staging)](https://glasswall.visualstudio.com/Glasswall%20Cloud/_build/latest?definitionId=468&branchName=staging)
+![CD](https://github.com/filetrust/glasswall-engineering-site/workflows/CD/badge.svg)
+
+
+### Yarn
+```
+npm install -g yarn
+```
+
+This command will install the Yarn package manager. Yarn is used to build the project in the deployment pipeline.
 
 ### Installation
-
 ```
-$ npm install
+yarn install
 ```
 
 ### Local Development
 
 ```
-$ npm run start
+yarn start
 ```
 
 This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
@@ -21,10 +30,11 @@ This command starts a local development server and open up a browser window. Mos
 ### Build
 
 ```
-$ npm run build
+yarn build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
 
 ### Deployment
 
