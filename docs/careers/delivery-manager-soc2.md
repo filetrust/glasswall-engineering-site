@@ -59,7 +59,7 @@ Please read our blog post on the job, complete the challenges, then apply at [ht
 
 Blog Post:
 
-[https://medium.com/glasswall-engineering/were-hiring-calling-devops-sre-and-team-leads-407d02151abb](https://medium.com/glasswall-engineering/were-hiring-calling-devops-sre-and-team-leads-407d02151abb)
+[https://medium.com/glasswall-engineering/were-hiring-any-security-and-compliance-people-out-there-to-help-us-achieve-soc-2-and-then-some-10e0d15571fc](https://medium.com/glasswall-engineering/were-hiring-any-security-and-compliance-people-out-there-to-help-us-achieve-soc-2-and-then-some-10e0d15571fc)
 
 **Reference Materials**
 
