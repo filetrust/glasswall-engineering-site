@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[38],{172:function(l){l.exports=JSON.parse('{"allTagsPath":"/glasswall-engineering-site/blog/tags","slug":"hello","name":"hello","count":2,"permalink":"/glasswall-engineering-site/blog/tags/hello"}')}}]);
