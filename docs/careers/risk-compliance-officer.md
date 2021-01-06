@@ -4,7 +4,7 @@ id: risk-compliance-officer
 sidebar_label: Risk Compliance Officer
 ---
 
-![](RackMultipart20210105-4-7yxf34_html_e1c44fd6dce4e2a7.png)Glasswall Solutions Limited
+Glasswall Solutions Limited
 
 Risk Compliance Officer – Job Description
 
