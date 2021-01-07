@@ -58,7 +58,6 @@ The role will report directly to the Head of InfoSec
 **How to Apply**
 
 Please read our blog post on the job, complete the challenges, submit your application and challenges to: [http://careers.glasswallsolutions.com/](http://careers.glasswallsolutions.com/)  
-Then proceed to the Job Post on Upwork and apply for the contract there too.
 
 Blog Post:
 
