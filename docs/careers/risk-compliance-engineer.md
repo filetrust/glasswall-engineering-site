@@ -8,7 +8,7 @@ Glasswall Solutions Limited
 
 Risk Compliance Engineer – Job Description
 
-Risk Compliance Engineer - focused on Automating SOC2 using Jira
+### Risk Compliance Engineer - focused on Automating SOC2 using Jira
 
 At Glasswall, we are doing things a bit differently. Good different. And we&#39;re not just talking about it; we&#39;re walking the walk. The amount of learning, growth, progression, and positivity that we are experiencing right now makes me excited and privileged to be here and be part of our evolution.
 
