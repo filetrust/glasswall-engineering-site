@@ -8,7 +8,10 @@ Glasswall Solutions Limited
 
 Risk Compliance Engineer – Job Description
 
-Risk Compliance Engineer - focused on Automating SOC2 using Jira
+### Risk Compliance Engineer - focused on Automating SOC2 using Jira  
+<p>&nbsp;</p>
+Check out this [6min youtube](https://www.youtube.com/watch?v=hfeKvC93BGg&feature=youtu.be) that explains the role and our approach to achieving continous compliance.  For the longer 14min version, see the references below.
+There is also an incredible Open Security Summit session where we presented this, the recording can be found [here](https://open-security-summit.org/sessions/2021/mini-summits/jan/governance/automating-soc2-using-jira/)  
 
 At Glasswall, we are doing things a bit differently. Good different. And we&#39;re not just talking about it; we&#39;re walking the walk. The amount of learning, growth, progression, and positivity that we are experiencing right now makes me excited and privileged to be here and be part of our evolution.
 
@@ -58,7 +61,6 @@ The role will report directly to the Head of InfoSec
 **How to Apply**
 
 Please read our blog post on the job, complete the challenges, submit your application and challenges to: [http://careers.glasswallsolutions.com/](http://careers.glasswallsolutions.com/)  
-Then proceed to the Job Post on Upwork and apply for the contract there too.
 
 Blog Post:
 
@@ -70,5 +72,5 @@ Blog Post:
 - Glasswall Engineering Site - [https://engineering.glasswallsolutions.com/](https://engineering.glasswallsolutions.com/)
 - Glasswall File Drop Website - [https://file-drop.co.uk/](https://file-drop.co.uk/)
 - Glasswall InfoSec Site - [https://it-infosec.glasswallsolutions.com/](https://it-infosec.glasswallsolutions.com/)
-
+- Youtube Video explaining the Roles - [Soc 2 - Roles](https://www.youtube.com/watch?v=1QUpEtI9fQg&feature=youtu.be)
 
