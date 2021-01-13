@@ -9,7 +9,8 @@ Glasswall Solutions Limited
 Risk Compliance Officer – Job Description
 
 ### Risk Compliance Officer - expert focused on Automating SOC2 using Jira  
-<p>&nbsp;</p>
+  
+  
 Check out this [6min youtube](https://www.youtube.com/watch?v=hfeKvC93BGg&feature=youtu.be) that explains the role and our approach to achieving continous compliance.  For the longer 14min version, see the references below.
 There is also an incredible Open Security Summit session where we presented this, the recording can be found [here](https://open-security-summit.org/sessions/2021/mini-summits/jan/governance/automating-soc2-using-jira/)
 
